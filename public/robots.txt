@@ -1,0 +1,5 @@
+# robots.txt for bitesinbyte.com
+User-agent: *
+Allow: /
+
+Sitemap: https://www.bitesinbyte.com/sitemap.xml

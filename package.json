@@ -1,42 +1,33 @@
 {
-  "name": "links",
+  "name": "bitesinbyte",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "clean": "rm -rf .next out"
   },
   "dependencies": {
-    "@nextui-org/button": "2.0.34",
-    "@nextui-org/code": "2.0.28",
-    "@nextui-org/input": "2.1.21",
-    "@nextui-org/kbd": "2.0.29",
-    "@nextui-org/link": "2.0.32",
-    "@nextui-org/navbar": "2.0.27",
-    "@nextui-org/react": "^2.2.10",
-    "@nextui-org/snippet": "2.0.30",
-    "@nextui-org/switch": "2.0.30",
-    "@nextui-org/system": "2.2.2",
-    "@nextui-org/theme": "2.2.6",
-    "@react-aria/ssr": "^3.9.3",
-    "@react-aria/visually-hidden": "^3.8.12",
-    "@types/node": "20.12.5",
-    "@types/react": "18.3.3",
-    "@types/react-dom": "18.3.0",
-    "autoprefixer": "10.4.19",
+    "@radix-ui/react-slot": "^1.1.1",
+    "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "eslint-config-next": "14.2.4",
-    "framer-motion": "^11.2.10",
-    "intl-messageformat": "^10.5.14",
+    "lucide-react": "^0.469.0",
     "next": "^14.2.21",
-    "next-themes": "^0.3.0",
-    "postcss": "8.4.35",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
-    "tailwind-variants": "^0.2.1",
-    "tailwindcss": "3.4.4",
-    "typescript": "5.4.5"
+    "next-themes": "^0.4.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwind-merge": "^2.6.0",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.12",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.6.3"
   }
 }

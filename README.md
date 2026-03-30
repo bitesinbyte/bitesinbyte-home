@@ -1,97 +1,76 @@
-![CodeQL](https://github.com/bitesinbyte/links/actions/workflows/codeql.yml/badge.svg?branch=main)
-[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/bitesinbyte/links/badge)](https://securityscorecards.dev/viewer/?uri=github.com/bitesinbyte/links)
+# Bites In Byte
 
-# Links
+The official website for [Bites In Byte](https://www.bitesinbyte.com) — a technology organization building practical tools that solve real problems.
 
-Simple and easy to use links organiser for your social media accounts
+From medical exam prep for doctors in Germany to citizenship test tools, career resources, and developer utilities — small, practical software packed into every byte.
 
-Demo - https://bitesinbyte.github.io/links
+## Products
 
-## Configuration
+| Product | Description | URL |
+|---------|-------------|-----|
+| **Amistio** | AI-powered Kenntnisprüfung simulation & training for foreign doctors in Germany | [amistio.com](https://www.amistio.com) |
+| **Leben in Deutschland** | German citizenship test (Einbürgerungstest) prep with 310 questions | [lebenindeutschland.org](https://www.lebenindeutschland.org) |
+| **Resume Builder** | ATS-optimized resume builder | [resume.bitesinbyte.com](https://resume.bitesinbyte.com) |
+| **EDMX Tools** | Tools for EDMX/OData metadata files | [edmx.bitesinbyte.com](https://edmx.bitesinbyte.com) |
 
-There are two configuraiton file
+Each product lives in its own repository and is deployed independently.
 
-1. [`config.json`](https://github.com/bitesinbyte/links/blob/main/data/config.json)
+## Tech Stack
 
-```json
-{
-  "mainImageSource": "Main Image Path",
-  "mainImageAlt": "Main Image Alt",
-  "brandName": "Brand Name",
-  "description": "A short description",
-  "socialLinks": {
-    "instagram": "instagram link",
-    "linkedin": "",
-    "blog": "",
-    "web": "",
-    "github": "",
-    "facebook": "",
-    "snapchat": "",
-    "tiktok": "",
-    "twitter": "",
-    "youtube": ""
-  }
-}
-```
-
-2. [`links.json`](https://github.com/bitesinbyte/links/blob/main/data/links.json)
-
-```json
-{
-  "blog": [
-    {
-      "title": "Medium",
-      "link": "link"
-    },
-    {
-      "title": "Bites in byte - Blog",
-      "link": "link"
-    }
-  ],
-  "instagram": [],
-  "linkedin": [],
-  "web": [],
-  "github": [],
-  "facebook": [],
-  "snapchat": [],
-  "tiktok": [],
-  "twitter": [],
-  "youtube": [],
-  "other": []
-}
-```
-
-## Technologies Used
-
-- [Next.js 14](https://nextjs.org/docs/getting-started)
-- [NextUI v2](https://nextui.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Tailwind Variants](https://tailwind-variants.org)
+- [Next.js 14](https://nextjs.org/) — static export (`output: "export"`)
+- [Tailwind CSS](https://tailwindcss.com/) + [shadcn/ui](https://ui.shadcn.com/) patterns
 - [TypeScript](https://www.typescriptlang.org/)
-- [next-themes](https://github.com/pacocoursey/next-themes)
+- Deployed to [GitHub Pages](https://pages.github.com/)
 
-## How to Use
+## Getting Started
 
-### Use the template with create-next-app
+### Prerequisites
 
-clone the repository, run the following command:
+- [Node.js](https://nodejs.org/) 20 or later
+- npm
 
-```bash
-git clone https://github.com/bitesinbyte/links.git
-```
-
-### Install dependencies
+### Development
 
 ```bash
+# Install dependencies
 npm install
-```
 
-### Run the development server
-
-```bash
+# Start dev server at http://localhost:3000
 npm run dev
+
+# Build static export to ./out
+npm run build
+
+# Clean build artifacts
+npm run clean
 ```
+
+## Project Structure
+
+```
+app/            → Next.js app directory (pages, layout, global styles)
+components/     → UI components (product grid, hero globe, social bar, etc.)
+hooks/          → Custom React hooks
+lib/            → Utility functions
+public/         → Static assets (favicons, product cover SVGs, OG image)
+.github/        → GitHub Actions workflow for deployment
+```
+
+## Deployment
+
+Pushes to `main` automatically deploy to GitHub Pages via the workflow in `.github/workflows/deploy.yml`.
+
+The site is served at [www.bitesinbyte.com](https://www.bitesinbyte.com) via the `CNAME` file.
+
+## Connect
+
+- [GitHub](https://github.com/bitesinbyte)
+- [LinkedIn](https://www.linkedin.com/company/bitesinbyte)
+- [Instagram](https://www.instagram.com/bitesinbyte)
+- [Mastodon](https://me.dm/@bitesinbyte)
+- [Threads](https://www.threads.net/@bitesinbyte)
+- [Blog](https://blogs.bitesinbyte.com)
 
 ## License
 
-Licensed under the [MIT license](https://github.com/bitesinbyte/links/blob/main/LICENSE).
+[MIT](LICENSE)
