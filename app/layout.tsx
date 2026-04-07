@@ -11,12 +11,12 @@ export const metadata: Metadata = {
     template: "%s | Bites In Byte",
   },
   description:
-    "Bites In Byte builds practical tools that solve real problems. Home of Amistio (KP exam prep), Leben in Deutschland (citizenship test), Resume Builder, and EDMX Tools.",
+    "Bites In Byte builds practical tools that solve real problems. Home of Kenntnistrainer (KP exam prep), Leben in Deutschland (citizenship test), Resume Builder, and EDMX Tools.",
   metadataBase: new URL("https://www.bitesinbyte.com"),
   keywords: [
     "Bites In Byte",
     "bitesinbyte",
-    "Amistio",
+    "Kenntnistrainer",
     "Kenntnisprüfung",
     "KP exam",
     "Leben in Deutschland",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Bites In Byte — Tools That Solve Real Problems",
     description:
-      "Bites In Byte builds practical tools that solve real problems. Home of Amistio, Leben in Deutschland, Resume Builder, and EDMX Tools.",
+      "Bites In Byte builds practical tools that solve real problems. Home of Kenntnistrainer, Leben in Deutschland, Resume Builder, and EDMX Tools.",
     url: "https://www.bitesinbyte.com",
     siteName: "Bites In Byte",
     type: "website",
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Bites In Byte — Tools That Solve Real Problems",
     description:
-      "Bites In Byte builds practical tools that solve real problems. Home of Amistio, Leben in Deutschland, Resume Builder, and EDMX Tools.",
+      "Bites In Byte builds practical tools that solve real problems. Home of Kenntnistrainer, Leben in Deutschland, Resume Builder, and EDMX Tools.",
     images: ["/og-image.png"],
   },
   icons: {
@@ -114,11 +114,11 @@ const productsJsonLd = [
   {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    name: "Amistio",
-    url: "https://www.amistio.com",
+    name: "Kenntnistrainer",
+    url: "https://www.kenntnistrainer.de",
     applicationCategory: "EducationalApplication",
     description:
-      "AI-powered Kenntnisprüfung (KP) simulation and training for foreign doctors in Germany. Structured 7-step case flow, AI evaluation, spaced repetition, and medical communication in German.",
+      "KI-gestützte Kenntnisprüfung Simulation & Training für ausländische Ärzte in Deutschland. Strukturierter 7-Schritte-Fallablauf, KI-Bewertung, Spaced Repetition und medizinische Kommunikation auf Deutsch.",
     operatingSystem: "Web",
     offers: {
       "@type": "Offer",

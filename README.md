@@ -8,7 +8,7 @@ From medical exam prep for doctors in Germany to citizenship test tools, career 
 
 | Product | Description | URL |
 |---------|-------------|-----|
-| **Amistio** | AI-powered Kenntnisprüfung simulation & training for foreign doctors in Germany | [amistio.com](https://www.amistio.com) |
+| **Kenntnistrainer** | KI-gestützte Kenntnisprüfung simulation & training for foreign doctors in Germany | [kenntnistrainer.de](https://www.kenntnistrainer.de) |
 | **Leben in Deutschland** | German citizenship test (Einbürgerungstest) prep with 310 questions | [lebenindeutschland.org](https://www.lebenindeutschland.org) |
 | **Resume Builder** | ATS-optimized resume builder | [resume.bitesinbyte.com](https://resume.bitesinbyte.com) |
 | **EDMX Tools** | Tools for EDMX/OData metadata files | [edmx.bitesinbyte.com](https://edmx.bitesinbyte.com) |

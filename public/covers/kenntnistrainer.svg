@@ -127,7 +127,7 @@
   </g>
 
   <!-- Title -->
-  <text x="400" y="370" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="700" fill="rgba(255,255,255,0.9)" text-anchor="middle" letter-spacing="2">AMISTIO</text>
+  <text x="400" y="370" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="700" fill="rgba(255,255,255,0.9)" text-anchor="middle" letter-spacing="2">KENNTNISTRAINER</text>
 
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="800" y2="400">

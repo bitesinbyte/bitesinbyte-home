@@ -38,12 +38,12 @@ const socialLinks: SocialLinks = {
 
 const products: Product[] = [
   {
-    name: "Amistio",
+    name: "Kenntnistrainer",
     title: "KI-gest\u00FCtzte Kenntnisprüfung Simulation & Training",
     description:
       "Kenntnisprüfung (KP) Vorbereitung mit KI-Simulation: Strukturierter 7-Schritte-Fallablauf, KI-Bewertung, Spaced Repetition und medizinische Kommunikation auf Deutsch. Für ausländische Ärzte in Deutschland.",
-    url: "https://www.amistio.com",
-    cover: "/covers/amistio.svg",
+    url: "https://www.kenntnistrainer.de",
+    cover: "/covers/kenntnistrainer.svg",
     tags: ["AI", "Medical", "Training"],
     featured: true,
   },
