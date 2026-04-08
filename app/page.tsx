@@ -58,15 +58,6 @@ const products: Product[] = [
     featured: true,
   },
   {
-    name: "Resume Builder",
-    title: "Get hired with an ATS-optimized resume",
-    description:
-      "A cutting-edge resume builder that helps job seekers create a professional, ATS-friendly resume in minutes. Optimize your resume for maximum visibility with applicant tracking systems.",
-    url: "https://resume.bitesinbyte.com",
-    cover: "/covers/resume.svg",
-    tags: ["Productivity", "Career"],
-  },
-  {
     name: "Developer Tools",
     title: "Everyday utilities for developers",
     description:
@@ -74,6 +65,16 @@ const products: Product[] = [
     url: "https://tools.bitesinbyte.com",
     cover: "/covers/tools.svg",
     tags: ["Developer Tools", "Utilities", "Web"],
+    featured: true,
+  },
+  {
+    name: "Resume Builder",
+    title: "Get hired with an ATS-optimized resume",
+    description:
+      "A cutting-edge resume builder that helps job seekers create a professional, ATS-friendly resume in minutes. Optimize your resume for maximum visibility with applicant tracking systems.",
+    url: "https://resume.bitesinbyte.com",
+    cover: "/covers/resume.svg",
+    tags: ["Productivity", "Career"],
   },
   {
     name: "EDMX Tools",
