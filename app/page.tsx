@@ -67,6 +67,15 @@ const products: Product[] = [
     tags: ["Productivity", "Career"],
   },
   {
+    name: "Developer Tools",
+    title: "Everyday utilities for developers",
+    description:
+      "A growing collection of developer utilities — JSON formatter, Base64 encoder/decoder, UUID generator, URL parser, and more. Fast, free, and right in your browser.",
+    url: "https://tools.bitesinbyte.com",
+    cover: "/covers/tools.svg",
+    tags: ["Developer Tools", "Utilities", "Web"],
+  },
+  {
     name: "EDMX Tools",
     title: "Tools for EDMX & OData metadata",
     description:

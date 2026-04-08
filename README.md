@@ -11,6 +11,7 @@ From medical exam prep for doctors in Germany to citizenship test tools, career 
 | **Kenntnistrainer** | KI-gestützte Kenntnisprüfung simulation & training for foreign doctors in Germany | [kenntnistrainer.de](https://www.kenntnistrainer.de) |
 | **Leben in Deutschland** | German citizenship test (Einbürgerungstest) prep with 310 questions | [lebenindeutschland.org](https://www.lebenindeutschland.org) |
 | **Resume Builder** | ATS-optimized resume builder | [resume.bitesinbyte.com](https://resume.bitesinbyte.com) |
+| **Developer Tools** | Everyday developer utilities — JSON formatter, Base64, UUID, and more | [tools.bitesinbyte.com](https://tools.bitesinbyte.com) |
 | **EDMX Tools** | Tools for EDMX/OData metadata files | [edmx.bitesinbyte.com](https://edmx.bitesinbyte.com) |
 
 Each product lives in its own repository and is deployed independently.

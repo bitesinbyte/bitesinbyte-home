@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: "%s | Bites In Byte",
   },
   description:
-    "Bites In Byte builds practical tools that solve real problems. Home of Kenntnistrainer (KP exam prep), Leben in Deutschland (citizenship test), Resume Builder, and EDMX Tools.",
+    "Bites In Byte builds practical tools that solve real problems. Home of Kenntnistrainer (KP exam prep), Leben in Deutschland (citizenship test), Resume Builder, Developer Tools, and EDMX Tools.",
   metadataBase: new URL("https://www.bitesinbyte.com"),
   keywords: [
     "Bites In Byte",
@@ -24,6 +24,10 @@ export const metadata: Metadata = {
     "German citizenship test",
     "Resume Builder",
     "ATS resume",
+    "Developer Tools",
+    "JSON formatter",
+    "Base64 encoder",
+    "UUID generator",
     "EDMX Tools",
     "OData",
     "developer tools",
@@ -50,7 +54,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Bites In Byte — Tools That Solve Real Problems",
     description:
-      "Bites In Byte builds practical tools that solve real problems. Home of Kenntnistrainer, Leben in Deutschland, Resume Builder, and EDMX Tools.",
+      "Bites In Byte builds practical tools that solve real problems. Home of Kenntnistrainer, Leben in Deutschland, Resume Builder, Developer Tools, and EDMX Tools.",
     url: "https://www.bitesinbyte.com",
     siteName: "Bites In Byte",
     type: "website",
@@ -68,7 +72,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Bites In Byte — Tools That Solve Real Problems",
     description:
-      "Bites In Byte builds practical tools that solve real problems. Home of Kenntnistrainer, Leben in Deutschland, Resume Builder, and EDMX Tools.",
+      "Bites In Byte builds practical tools that solve real problems. Home of Kenntnistrainer, Leben in Deutschland, Resume Builder, Developer Tools, and EDMX Tools.",
     images: ["/og-image.png"],
   },
   icons: {
@@ -159,6 +163,21 @@ const productsJsonLd = [
     applicationCategory: "BusinessApplication",
     description:
       "A cutting-edge resume builder that helps job seekers create professional, ATS-friendly resumes in minutes. Optimize your resume for maximum visibility with applicant tracking systems.",
+    operatingSystem: "Web",
+    creator: {
+      "@type": "Organization",
+      name: "Bites In Byte",
+      url: "https://www.bitesinbyte.com",
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "Developer Tools",
+    url: "https://tools.bitesinbyte.com",
+    applicationCategory: "DeveloperApplication",
+    description:
+      "A growing collection of developer utilities — JSON formatter, Base64 encoder/decoder, UUID generator, URL parser, and more. Fast, free, and right in your browser.",
     operatingSystem: "Web",
     creator: {
       "@type": "Organization",
