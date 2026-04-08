@@ -39,13 +39,24 @@ const socialLinks: SocialLinks = {
 const products: Product[] = [
   {
     name: "Kenntnistrainer",
-    title: "KI-gest\u00FCtzte Kenntnisprüfung Simulation & Training",
+    title: "KI-gestützte Kenntnisprüfung Simulation & Training",
     description:
       "Kenntnisprüfung (KP) Vorbereitung mit KI-Simulation: Strukturierter 7-Schritte-Fallablauf, KI-Bewertung, Spaced Repetition und medizinische Kommunikation auf Deutsch. Für ausländische Ärzte in Deutschland.",
     url: "https://www.kenntnistrainer.de",
     cover: "/covers/kenntnistrainer.svg",
     tags: ["AI", "Medical", "Training"],
     featured: true,
+  },
+  {
+    name: "Fachsprachprüfung",
+    title: "KI-gestützte Fachsprachprüfung Simulation & Training",
+    description:
+      "Fachsprachprüfung (FSP) Vorbereitung mit KI-Simulation: Arzt-Patienten-Gespräch, Dokumentation und Arzt-Arzt-Übergabe. Medizinische Kommunikation auf Deutsch für ausländische Ärzte in Deutschland.",
+    url: "#",
+    cover: "/covers/fsp.svg",
+    tags: ["AI", "Medical", "Language"],
+    featured: true,
+    comingSoon: true,
   },
   {
     name: "Leben in Deutschland",

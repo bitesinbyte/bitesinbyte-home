@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: "%s | Bites In Byte",
   },
   description:
-    "Bites In Byte builds practical tools that solve real problems. Home of Kenntnistrainer (KP exam prep), Leben in Deutschland (citizenship test), Resume Builder, Developer Tools, and EDMX Tools.",
+    "Bites In Byte builds practical tools that solve real problems. Home of Kenntnistrainer (KP exam prep), Fachsprachprüfung (FSP training), Leben in Deutschland (citizenship test), Resume Builder, Developer Tools, and EDMX Tools.",
   metadataBase: new URL("https://www.bitesinbyte.com"),
   keywords: [
     "Bites In Byte",
@@ -19,6 +19,9 @@ export const metadata: Metadata = {
     "Kenntnistrainer",
     "Kenntnisprüfung",
     "KP exam",
+    "Fachsprachprüfung",
+    "FSP",
+    "FSP exam",
     "Leben in Deutschland",
     "Einbürgerungstest",
     "German citizenship test",
@@ -54,7 +57,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Bites In Byte — Tools That Solve Real Problems",
     description:
-      "Bites In Byte builds practical tools that solve real problems. Home of Kenntnistrainer, Leben in Deutschland, Resume Builder, Developer Tools, and EDMX Tools.",
+      "Bites In Byte builds practical tools that solve real problems. Home of Kenntnistrainer, Fachsprachprüfung, Leben in Deutschland, Resume Builder, Developer Tools, and EDMX Tools.",
     url: "https://www.bitesinbyte.com",
     siteName: "Bites In Byte",
     type: "website",
@@ -72,7 +75,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Bites In Byte — Tools That Solve Real Problems",
     description:
-      "Bites In Byte builds practical tools that solve real problems. Home of Kenntnistrainer, Leben in Deutschland, Resume Builder, Developer Tools, and EDMX Tools.",
+      "Bites In Byte builds practical tools that solve real problems. Home of Kenntnistrainer, Fachsprachprüfung, Leben in Deutschland, Resume Builder, Developer Tools, and EDMX Tools.",
     images: ["/og-image.png"],
   },
   icons: {
@@ -129,6 +132,21 @@ const productsJsonLd = [
       price: "0",
       priceCurrency: "EUR",
     },
+    creator: {
+      "@type": "Organization",
+      name: "Bites In Byte",
+      url: "https://www.bitesinbyte.com",
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "Fachsprachprüfung",
+    url: "https://www.bitesinbyte.com",
+    applicationCategory: "EducationalApplication",
+    description:
+      "KI-gestützte Fachsprachprüfung (FSP) Simulation & Training: Arzt-Patienten-Gespräch, Dokumentation und Arzt-Arzt-Übergabe. Medizinische Kommunikation auf Deutsch für ausländische Ärzte in Deutschland.",
+    operatingSystem: "Web",
     creator: {
       "@type": "Organization",
       name: "Bites In Byte",

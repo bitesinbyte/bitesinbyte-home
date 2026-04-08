@@ -9,6 +9,7 @@ From medical exam prep for doctors in Germany to citizenship test tools, career 
 | Product | Description | URL |
 |---------|-------------|-----|
 | **Kenntnistrainer** | KI-gestützte Kenntnisprüfung simulation & training for foreign doctors in Germany | [kenntnistrainer.de](https://www.kenntnistrainer.de) |
+| **Fachsprachprüfung** | KI-gestützte FSP simulation & training for foreign doctors in Germany _(coming soon)_ | — |
 | **Leben in Deutschland** | German citizenship test (Einbürgerungstest) prep with 310 questions | [lebenindeutschland.org](https://www.lebenindeutschland.org) |
 | **Resume Builder** | ATS-optimized resume builder | [resume.bitesinbyte.com](https://resume.bitesinbyte.com) |
 | **Developer Tools** | Everyday developer utilities — JSON formatter, Base64, UUID, and more | [tools.bitesinbyte.com](https://tools.bitesinbyte.com) |
