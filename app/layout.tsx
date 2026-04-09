@@ -142,7 +142,7 @@ const productsJsonLd = [
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     name: "Fachsprachprüfung",
-    url: "https://www.bitesinbyte.com",
+    url: "https://www.fachsprachtrainer.de",
     applicationCategory: "EducationalApplication",
     description:
       "KI-gestützte Fachsprachprüfung (FSP) Simulation & Training: Arzt-Patienten-Gespräch, Dokumentation und Arzt-Arzt-Übergabe. Medizinische Kommunikation auf Deutsch für ausländische Ärzte in Deutschland.",

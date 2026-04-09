@@ -52,11 +52,10 @@ const products: Product[] = [
     title: "KI-gestützte Fachsprachprüfung Simulation & Training",
     description:
       "Fachsprachprüfung (FSP) Vorbereitung mit KI-Simulation: Arzt-Patienten-Gespräch, Dokumentation und Arzt-Arzt-Übergabe. Medizinische Kommunikation auf Deutsch für ausländische Ärzte in Deutschland.",
-    url: "#",
+    url: "https://www.fachsprachtrainer.de",
     cover: "/covers/fsp.svg",
     tags: ["AI", "Medical", "Language"],
     featured: true,
-    comingSoon: true,
   },
   {
     name: "Leben in Deutschland",
