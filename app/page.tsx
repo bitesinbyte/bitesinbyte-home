@@ -95,6 +95,15 @@ const products: Product[] = [
     cover: "/covers/edmx.svg",
     tags: ["Developer Tools", ".NET", "OData"],
   },
+  {
+    name: "Azure Draw.io Assets",
+    title: "Azure icons for architecture diagrams",
+    description:
+      "Browse 643 Azure service icons for your architecture diagrams. Continuously synced from official Microsoft Azure icon sets, ready to use in Draw.io.",
+    url: "https://azure-assets.bitesinbyte.com",
+    cover: "/covers/azure-assets.svg",
+    tags: ["Azure", "Draw.io", "Architecture"],
+  },
 ];
 
 const navLinks = [

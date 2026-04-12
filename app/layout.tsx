@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: "%s | Bites In Byte",
   },
   description:
-    "Bites In Byte builds practical tools that solve real problems. Home of Kenntnistrainer (KP exam prep), Fachsprachprüfung (FSP training), Leben in Deutschland (citizenship test), Resume Builder, Developer Tools, and EDMX Tools.",
+    "Bites In Byte builds practical tools that solve real problems. Home of Kenntnistrainer (KP exam prep), Fachsprachprüfung (FSP training), Leben in Deutschland (citizenship test), Resume Builder, Developer Tools, EDMX Tools, and Azure Draw.io Assets.",
   metadataBase: new URL("https://www.bitesinbyte.com"),
   keywords: [
     "Bites In Byte",
@@ -33,6 +33,10 @@ export const metadata: Metadata = {
     "UUID generator",
     "EDMX Tools",
     "OData",
+    "Azure Draw.io Assets",
+    "Azure icons",
+    "architecture diagrams",
+    "Draw.io",
     "developer tools",
     "software tools",
     "Germany",
@@ -57,7 +61,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Bites In Byte — Tools That Solve Real Problems",
     description:
-      "Bites In Byte builds practical tools that solve real problems. Home of Kenntnistrainer, Fachsprachprüfung, Leben in Deutschland, Resume Builder, Developer Tools, and EDMX Tools.",
+      "Bites In Byte builds practical tools that solve real problems. Home of Kenntnistrainer, Fachsprachprüfung, Leben in Deutschland, Resume Builder, Developer Tools, EDMX Tools, and Azure Draw.io Assets.",
     url: "https://www.bitesinbyte.com",
     siteName: "Bites In Byte",
     type: "website",
@@ -75,7 +79,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Bites In Byte — Tools That Solve Real Problems",
     description:
-      "Bites In Byte builds practical tools that solve real problems. Home of Kenntnistrainer, Fachsprachprüfung, Leben in Deutschland, Resume Builder, Developer Tools, and EDMX Tools.",
+      "Bites In Byte builds practical tools that solve real problems. Home of Kenntnistrainer, Fachsprachprüfung, Leben in Deutschland, Resume Builder, Developer Tools, EDMX Tools, and Azure Draw.io Assets.",
     images: ["/og-image.png"],
   },
   icons: {
@@ -212,6 +216,26 @@ const productsJsonLd = [
     description:
       "A set of tools for EDMX or OData metadata files — EDMX Explorer, EDMX Trimmer, EDMX to OpenAPI converter, and EDMX to JSON converter.",
     operatingSystem: "Web",
+    creator: {
+      "@type": "Organization",
+      name: "Bites In Byte",
+      url: "https://www.bitesinbyte.com",
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "Azure Draw.io Assets",
+    url: "https://azure-assets.bitesinbyte.com",
+    applicationCategory: "DeveloperApplication",
+    description:
+      "Browse 643 Azure service icons for your architecture diagrams. Continuously synced from official Microsoft Azure icon sets, ready to use in Draw.io.",
+    operatingSystem: "Web",
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "EUR",
+    },
     creator: {
       "@type": "Organization",
       name: "Bites In Byte",
