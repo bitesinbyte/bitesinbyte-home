@@ -104,6 +104,15 @@ const products: Product[] = [
     cover: "/covers/azure-assets.svg",
     tags: ["Azure", "Draw.io", "Architecture"],
   },
+  {
+    name: "Azure Compliance Matrix",
+    title: "Azure services compliance coverage",
+    description:
+      "Interactive compliance coverage matrix for Azure services. Search, filter, and explore certifications across 17 frameworks (ISO 27001, SOC, HIPAA, PCI DSS, and more) for Azure and Azure Government.",
+    url: "https://azure-compliance.bitesinbyte.com",
+    cover: "/covers/azure-compliance.svg",
+    tags: ["Azure", "Compliance", "Security"],
+  },
 ];
 
 const navLinks = [

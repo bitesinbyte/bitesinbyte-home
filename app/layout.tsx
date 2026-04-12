@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: "%s | Bites In Byte",
   },
   description:
-    "Bites In Byte builds practical tools that solve real problems. Home of Kenntnistrainer (KP exam prep), Fachsprachprüfung (FSP training), Leben in Deutschland (citizenship test), Resume Builder, Developer Tools, EDMX Tools, and Azure Draw.io Assets.",
+    "Bites In Byte builds practical tools that solve real problems. Home of Kenntnistrainer (KP exam prep), Fachsprachprüfung (FSP training), Leben in Deutschland (citizenship test), Resume Builder, Developer Tools, EDMX Tools, Azure Draw.io Assets, and Azure Compliance Matrix.",
   metadataBase: new URL("https://www.bitesinbyte.com"),
   keywords: [
     "Bites In Byte",
@@ -37,6 +37,12 @@ export const metadata: Metadata = {
     "Azure icons",
     "architecture diagrams",
     "Draw.io",
+    "Azure Compliance Matrix",
+    "Azure compliance",
+    "ISO 27001",
+    "SOC compliance",
+    "HIPAA",
+    "PCI DSS",
     "developer tools",
     "software tools",
     "Germany",
@@ -61,7 +67,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Bites In Byte — Tools That Solve Real Problems",
     description:
-      "Bites In Byte builds practical tools that solve real problems. Home of Kenntnistrainer, Fachsprachprüfung, Leben in Deutschland, Resume Builder, Developer Tools, EDMX Tools, and Azure Draw.io Assets.",
+      "Bites In Byte builds practical tools that solve real problems. Home of Kenntnistrainer, Fachsprachprüfung, Leben in Deutschland, Resume Builder, Developer Tools, EDMX Tools, Azure Draw.io Assets, and Azure Compliance Matrix.",
     url: "https://www.bitesinbyte.com",
     siteName: "Bites In Byte",
     type: "website",
@@ -79,7 +85,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Bites In Byte — Tools That Solve Real Problems",
     description:
-      "Bites In Byte builds practical tools that solve real problems. Home of Kenntnistrainer, Fachsprachprüfung, Leben in Deutschland, Resume Builder, Developer Tools, EDMX Tools, and Azure Draw.io Assets.",
+      "Bites In Byte builds practical tools that solve real problems. Home of Kenntnistrainer, Fachsprachprüfung, Leben in Deutschland, Resume Builder, Developer Tools, EDMX Tools, Azure Draw.io Assets, and Azure Compliance Matrix.",
     images: ["/og-image.png"],
   },
   icons: {
@@ -230,6 +236,26 @@ const productsJsonLd = [
     applicationCategory: "DeveloperApplication",
     description:
       "Browse 643 Azure service icons for your architecture diagrams. Continuously synced from official Microsoft Azure icon sets, ready to use in Draw.io.",
+    operatingSystem: "Web",
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "EUR",
+    },
+    creator: {
+      "@type": "Organization",
+      name: "Bites In Byte",
+      url: "https://www.bitesinbyte.com",
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "Azure Compliance Matrix",
+    url: "https://azure-compliance.bitesinbyte.com",
+    applicationCategory: "DeveloperApplication",
+    description:
+      "Interactive compliance coverage matrix for Azure services. Search, filter, and explore certifications across 17 frameworks (ISO 27001, SOC, HIPAA, PCI DSS, and more) for Azure and Azure Government.",
     operatingSystem: "Web",
     offers: {
       "@type": "Offer",
