@@ -1,17 +1,8 @@
 "use client";
 
 import { useReveal } from "@/hooks/use-reveal";
-
-export interface Product {
-  name: string;
-  title: string;
-  description: string;
-  url: string;
-  cover: string;
-  tags?: string[];
-  featured?: boolean;
-  comingSoon?: boolean;
-}
+import { OutboundLink } from "@/components/outbound-link";
+import type { Product } from "@/lib/site-data";
 
 function ProductCard({
   product,
@@ -93,11 +84,6 @@ function ProductCard({
         >
           {product.description}
         </p>
-        {!isComingSoon && (
-          <span className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-white/50 opacity-0 transition-all duration-300 group-hover:opacity-100">
-            Visit site &rarr;
-          </span>
-        )}
       </div>
     </div>
   );
@@ -118,15 +104,33 @@ function ProductCard({
   }
 
   return (
-    <a
-      href={product.url}
-      target="_blank"
-      rel="noopener noreferrer"
+    <div
       className={className}
       style={{ transitionDelay: `${index * 120}ms` }}
     >
-      {inner}
-    </a>
+      <a href={`/products/${product.slug}`} className="block">
+        {inner}
+      </a>
+      <div className="flex items-center justify-between border-t border-border/40 bg-card px-4 py-3">
+        <OutboundLink
+          href={product.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-xs font-medium text-muted-foreground transition-colors hover:text-foreground"
+          trackingTarget={product.slug}
+          trackingContext="product_grid_visit"
+          trackingUrl={product.url}
+        >
+          Visit site &rarr;
+        </OutboundLink>
+        <a
+          href={`/products/${product.slug}`}
+          className="text-xs font-medium text-muted-foreground transition-colors hover:text-foreground"
+        >
+          Learn more &rarr;
+        </a>
+      </div>
+    </div>
   );
 }
 

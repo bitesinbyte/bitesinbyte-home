@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
+import { products, socialLinks } from "@/lib/site-data";
 import { Providers } from "./providers";
 import "./globals.css";
 
@@ -7,23 +9,22 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: "Bites In Byte — Tools That Solve Real Problems",
+    default: "Bites In Byte - Tools That Solve Real Problems",
     template: "%s | Bites In Byte",
   },
   description:
-    "Bites In Byte builds practical tools that solve real problems. Home of Kenntnistrainer (KP exam prep), Fachsprachprüfung (FSP training), Leben in Deutschland (citizenship test), Resume Builder, Developer Tools, EDMX Tools, Azure Draw.io Assets, and Azure Compliance Matrix.",
+    "Bites In Byte builds practical tools that solve real problems. Home of Kenntnistrainer, Fachsprachprufung, Leben in Deutschland, Resume Builder, Developer Tools, EDMX Tools, Azure Draw.io Assets, and Azure Compliance Matrix.",
   metadataBase: new URL("https://www.bitesinbyte.com"),
   keywords: [
     "Bites In Byte",
     "bitesinbyte",
     "Kenntnistrainer",
-    "Kenntnisprüfung",
+    "Kenntnisprufung",
     "KP exam",
-    "Fachsprachprüfung",
+    "Fachsprachprufung",
     "FSP",
-    "FSP exam",
     "Leben in Deutschland",
-    "Einbürgerungstest",
+    "Einburgerungstest",
     "German citizenship test",
     "Resume Builder",
     "ATS resume",
@@ -35,7 +36,6 @@ export const metadata: Metadata = {
     "OData",
     "Azure Draw.io Assets",
     "Azure icons",
-    "architecture diagrams",
     "Draw.io",
     "Azure Compliance Matrix",
     "Azure compliance",
@@ -43,9 +43,6 @@ export const metadata: Metadata = {
     "SOC compliance",
     "HIPAA",
     "PCI DSS",
-    "developer tools",
-    "software tools",
-    "Germany",
   ],
   authors: [{ name: "Bites In Byte", url: "https://www.bitesinbyte.com" }],
   creator: "Bites In Byte",
@@ -65,9 +62,9 @@ export const metadata: Metadata = {
     canonical: "https://www.bitesinbyte.com",
   },
   openGraph: {
-    title: "Bites In Byte — Tools That Solve Real Problems",
+    title: "Bites In Byte - Tools That Solve Real Problems",
     description:
-      "Bites In Byte builds practical tools that solve real problems. Home of Kenntnistrainer, Fachsprachprüfung, Leben in Deutschland, Resume Builder, Developer Tools, EDMX Tools, Azure Draw.io Assets, and Azure Compliance Matrix.",
+      "Bites In Byte builds practical tools that solve real problems across education, career, and developer workflows.",
     url: "https://www.bitesinbyte.com",
     siteName: "Bites In Byte",
     type: "website",
@@ -77,15 +74,15 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Bites In Byte — Tools That Solve Real Problems",
+        alt: "Bites In Byte - Tools That Solve Real Problems",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bites In Byte — Tools That Solve Real Problems",
+    title: "Bites In Byte - Tools That Solve Real Problems",
     description:
-      "Bites In Byte builds practical tools that solve real problems. Home of Kenntnistrainer, Fachsprachprüfung, Leben in Deutschland, Resume Builder, Developer Tools, EDMX Tools, Azure Draw.io Assets, and Azure Compliance Matrix.",
+      "Bites In Byte builds practical tools that solve real problems across education, career, and developer workflows.",
     images: ["/og-image.png"],
   },
   icons: {
@@ -101,8 +98,6 @@ export const metadata: Metadata = {
   manifest: "/manifest.json",
 };
 
-/* ── JSON-LD Structured Data ─────────────────────────────── */
-
 const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -110,16 +105,16 @@ const organizationJsonLd = {
   url: "https://www.bitesinbyte.com",
   logo: "https://www.bitesinbyte.com/icon-512.png",
   description:
-    "A technology organization building practical tools that solve real problems — from medical exam prep to developer utilities.",
+    "A technology organization building practical tools that solve real problems - from medical exam prep to developer utilities.",
   foundingDate: "2020",
   sameAs: [
-    "https://github.com/bitesinbyte",
-    "https://www.instagram.com/bitesinbyte",
-    "https://www.linkedin.com/company/bitesinbyte",
-    "https://me.dm/@bitesinbyte",
-    "https://www.threads.net/@bitesinbyte",
-    "https://blogs.bitesinbyte.com",
-  ],
+    socialLinks.github,
+    socialLinks.instagram,
+    socialLinks.linkedin,
+    socialLinks.mastodon,
+    socialLinks.threads,
+    socialLinks.blog,
+  ].filter(Boolean),
   contactPoint: {
     "@type": "ContactPoint",
     email: "hello@bitesinbyte.com",
@@ -127,162 +122,33 @@ const organizationJsonLd = {
   },
 };
 
-const productsJsonLd = [
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    name: "Kenntnistrainer",
-    url: "https://www.kenntnistrainer.de",
-    applicationCategory: "EducationalApplication",
-    description:
-      "KI-gestützte Kenntnisprüfung Simulation & Training für ausländische Ärzte in Deutschland. Strukturierter 7-Schritte-Fallablauf, KI-Bewertung, Spaced Repetition und medizinische Kommunikation auf Deutsch.",
-    operatingSystem: "Web",
-    offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "EUR",
-    },
-    creator: {
-      "@type": "Organization",
-      name: "Bites In Byte",
-      url: "https://www.bitesinbyte.com",
-    },
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    name: "Fachsprachprüfung",
-    url: "https://www.fachsprachtrainer.de",
-    applicationCategory: "EducationalApplication",
-    description:
-      "KI-gestützte Fachsprachprüfung (FSP) Simulation & Training: Arzt-Patienten-Gespräch, Dokumentation und Arzt-Arzt-Übergabe. Medizinische Kommunikation auf Deutsch für ausländische Ärzte in Deutschland.",
-    operatingSystem: "Web",
-    creator: {
-      "@type": "Organization",
-      name: "Bites In Byte",
-      url: "https://www.bitesinbyte.com",
-    },
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    name: "Leben in Deutschland",
-    url: "https://www.lebenindeutschland.org",
-    applicationCategory: "EducationalApplication",
-    description:
-      "Prepare for the German Einbürgerungstest (citizenship test). Free service with 310 questions, Bundesländer-specific content, and comprehensive resources to help you succeed.",
-    operatingSystem: "Web",
-    offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "EUR",
-    },
-    creator: {
-      "@type": "Organization",
-      name: "Bites In Byte",
-      url: "https://www.bitesinbyte.com",
-    },
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    name: "Resume Builder",
-    url: "https://resume.bitesinbyte.com",
-    applicationCategory: "BusinessApplication",
-    description:
-      "A cutting-edge resume builder that helps job seekers create professional, ATS-friendly resumes in minutes. Optimize your resume for maximum visibility with applicant tracking systems.",
-    operatingSystem: "Web",
-    creator: {
-      "@type": "Organization",
-      name: "Bites In Byte",
-      url: "https://www.bitesinbyte.com",
-    },
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    name: "Developer Tools",
-    url: "https://tools.bitesinbyte.com",
-    applicationCategory: "DeveloperApplication",
-    description:
-      "A growing collection of developer utilities — JSON formatter, Base64 encoder/decoder, UUID generator, URL parser, and more. Fast, free, and right in your browser.",
-    operatingSystem: "Web",
-    creator: {
-      "@type": "Organization",
-      name: "Bites In Byte",
-      url: "https://www.bitesinbyte.com",
-    },
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    name: "EDMX Tools",
-    url: "https://edmx.bitesinbyte.com",
-    applicationCategory: "DeveloperApplication",
-    description:
-      "A set of tools for EDMX or OData metadata files — EDMX Explorer, EDMX Trimmer, EDMX to OpenAPI converter, and EDMX to JSON converter.",
-    operatingSystem: "Web",
-    creator: {
-      "@type": "Organization",
-      name: "Bites In Byte",
-      url: "https://www.bitesinbyte.com",
-    },
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    name: "Azure Draw.io Assets",
-    url: "https://azure-assets.bitesinbyte.com",
-    applicationCategory: "DeveloperApplication",
-    description:
-      "Browse 643 Azure service icons for your architecture diagrams. Continuously synced from official Microsoft Azure icon sets, ready to use in Draw.io.",
-    operatingSystem: "Web",
-    offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "EUR",
-    },
-    creator: {
-      "@type": "Organization",
-      name: "Bites In Byte",
-      url: "https://www.bitesinbyte.com",
-    },
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    name: "Azure Compliance Matrix",
-    url: "https://azure-compliance.bitesinbyte.com",
-    applicationCategory: "DeveloperApplication",
-    description:
-      "Interactive compliance coverage matrix for Azure services. Search, filter, and explore certifications across 17 frameworks (ISO 27001, SOC, HIPAA, PCI DSS, and more) for Azure and Azure Government.",
-    operatingSystem: "Web",
-    offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "EUR",
-    },
-    creator: {
-      "@type": "Organization",
-      name: "Bites In Byte",
-      url: "https://www.bitesinbyte.com",
-    },
-  },
-];
-
 const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "Bites In Byte",
   url: "https://www.bitesinbyte.com",
-  description:
-    "Bites In Byte builds practical tools that solve real problems.",
+  description: "Bites In Byte builds practical tools that solve real problems.",
   publisher: {
     "@type": "Organization",
     name: "Bites In Byte",
     url: "https://www.bitesinbyte.com",
   },
 };
+
+const productJsonLd = products.map((product) => ({
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: product.name,
+  url: product.url,
+  applicationCategory: "UtilitiesApplication",
+  description: product.longDescription,
+  operatingSystem: "Web",
+  creator: {
+    "@type": "Organization",
+    name: "Bites In Byte",
+    url: "https://www.bitesinbyte.com",
+  },
+}));
 
 export default function RootLayout({
   children,
@@ -292,25 +158,37 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <Script
+          defer
+          data-domain="bitesinbyte.com"
+          src="https://plausible.io/js/script.js"
+          strategy="afterInteractive"
+        />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-F9EC1KWJNY"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-F9EC1KWJNY');
+          `}
+        </Script>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(organizationJsonLd),
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(websiteJsonLd),
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
-        {productsJsonLd.map((product, i) => (
+        {productJsonLd.map((item, index) => (
           <script
-            key={i}
+            key={index}
             type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify(product),
-            }}
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(item) }}
           />
         ))}
       </head>

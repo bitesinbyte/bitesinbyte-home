@@ -9,18 +9,8 @@ import {
 } from "lucide-react";
 import { MastodonIcon, ThreadsIcon } from "@/components/icons";
 import { Button } from "@/components/ui/button";
-
-export interface SocialLinks {
-  instagram?: string;
-  linkedin?: string;
-  github?: string;
-  youtube?: string;
-  twitter?: string;
-  blog?: string;
-  web?: string;
-  mastodon?: string;
-  threads?: string;
-}
+import { OutboundLink } from "@/components/outbound-link";
+import type { SocialLinks } from "@/lib/site-data";
 
 const socialIconMap: Record<string, React.ElementType> = {
   instagram: Instagram,
@@ -35,9 +25,10 @@ const socialIconMap: Record<string, React.ElementType> = {
 
 interface SocialBarProps {
   links: SocialLinks;
+  context?: string;
 }
 
-export function SocialBar({ links }: SocialBarProps) {
+export function SocialBar({ links, context = "social_bar" }: SocialBarProps) {
   const entries = Object.entries(links).filter(
     ([, url]) => url && url.length > 0
   );
@@ -50,15 +41,18 @@ export function SocialBar({ links }: SocialBarProps) {
         const Icon = socialIconMap[platform] || ExternalLink;
         return (
           <Button key={platform} variant="ghost" size="icon" asChild>
-            <a
+            <OutboundLink
               href={url}
               target="_blank"
               rel="noopener noreferrer"
               aria-label={platform}
               className="transition-transform hover:scale-110"
+              trackingTarget={platform}
+              trackingContext={context}
+              trackingUrl={url}
             >
               <Icon className="h-5 w-5" />
-            </a>
+            </OutboundLink>
           </Button>
         );
       })}
