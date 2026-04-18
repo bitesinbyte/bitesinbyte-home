@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
+import { CookieConsent } from "@/components/cookie-consent";
+import { GoogleAnalytics } from "@/components/google-analytics";
 import { products, socialLinks } from "@/lib/site-data";
 import { Providers } from "./providers";
 import "./globals.css";
@@ -164,18 +166,6 @@ export default function RootLayout({
           src="https://plausible.io/js/script.js"
           strategy="afterInteractive"
         />
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-F9EC1KWJNY"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-F9EC1KWJNY');
-          `}
-        </Script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
@@ -193,7 +183,11 @@ export default function RootLayout({
         ))}
       </head>
       <body className={inter.className}>
-        <Providers>{children}</Providers>
+        <Providers>
+          {children}
+          <GoogleAnalytics />
+          <CookieConsent />
+        </Providers>
       </body>
     </html>
   );
