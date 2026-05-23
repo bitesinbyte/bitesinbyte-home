@@ -46,6 +46,25 @@ export const socialLinks: SocialLinks = {
 
 export const products: Product[] = [
   {
+    slug: "amistio",
+    name: "Amistio",
+    title: "Project brain mission control for local-runner execution",
+    description:
+      "Project brain mission control for turning product intent into decisions, plans, prompts, and approved local-runner execution.",
+    longDescription:
+      "Amistio turns product intent into decisions, plans, prompts, and approved local-runner execution. It helps teams review the project brain before implementation, sync approved Markdown into the repository, and run source changes through a paired local runner.",
+    url: "https://www.amistio.com",
+    cover: "/covers/amistio.svg",
+    tags: ["AI", "Planning", "Local Runner"],
+    highlights: [
+      { title: "Project Brain", description: "Capture the why, plan, constraints, prompts, and lessons as durable project context." },
+      { title: "Review Before Execution", description: "Turn wishes into reviewable ADRs, plans, specs, and implementation prompts before work runs." },
+      { title: "Repo-Portable Markdown", description: "Sync approved brain documents into the repository so project knowledge stays versioned with the code." },
+      { title: "Local Runner", description: "Coordinate work in the web app while source, secrets, and toolchains stay on the paired machine." },
+    ],
+    featured: true,
+  },
+  {
     slug: "kenntnistrainer",
     name: "Kenntnistrainer",
     title: "AI-powered Kenntnisprufung simulation and training",
