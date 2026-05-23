@@ -1,7 +1,7 @@
 "use client";
 
+import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { ThemeSwitch } from "@/components/theme-switch";
 import { Logo } from "@/components/logo";
 import { navLinks } from "@/lib/site-data";
 
@@ -22,22 +22,63 @@ export function Header({
   theme,
   setTheme,
 }: HeaderProps) {
+  const [pulling, setPulling] = useState(false);
+
+  const handlePull = () => {
+    setPulling(true);
+    setTheme(theme === "dark" ? "light" : "dark");
+    setTimeout(() => setPulling(false), 500);
+  };
+
   return (
     <header
-      className={`fixed top-0 z-50 w-full transition-all duration-300 ${
+      className={`fixed top-0 z-50 w-full overflow-visible transition-all duration-300 ${
         scrolled
           ? "border-b bg-background/70 shadow-sm backdrop-blur-xl"
           : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-4">
-        <a
-          href="#"
-          className="flex items-center gap-2 transition-opacity hover:opacity-80"
+      <div className="mx-auto flex h-14 max-w-5xl items-center justify-between overflow-visible px-4">
+        <button
+          onClick={handlePull}
+          className="group relative flex items-center gap-2 transition-opacity hover:opacity-80"
+          aria-label={theme === "dark" ? "Turn on the light" : "Turn off the light"}
         >
-          <Logo className="h-8 w-8" />
-          <span className="text-lg font-semibold tracking-tight">Bites In Byte</span>
-        </a>
+          <div className="relative">
+            <Logo className="h-8 w-8" lit={theme !== "dark"} />
+            {/* Pull cord */}
+            <div
+              className={`absolute left-1/2 top-full -translate-x-1/2 ${pulling ? "cord-pull" : "cord-sway"}`}
+            >
+              <svg
+                width="8"
+                height="28"
+                viewBox="0 0 8 28"
+                className="transition-transform duration-300 group-hover:translate-y-1"
+              >
+                {/* String */}
+                <path
+                  d="M4 0 Q3 8 4 14 Q5 20 4 24"
+                  stroke="currentColor"
+                  strokeWidth="1"
+                  fill="none"
+                  opacity="0.3"
+                  className="transition-opacity duration-300 group-hover:opacity-50"
+                />
+                {/* Bead at the end */}
+                <circle
+                  cx="4"
+                  cy="25"
+                  r="2.5"
+                  fill="currentColor"
+                  opacity="0.25"
+                  className="transition-opacity duration-300 group-hover:opacity-45"
+                />
+              </svg>
+            </div>
+          </div>
+          <span className="text-lg font-semibold tracking-tight">Lamplit Labs</span>
+        </button>
 
         <nav className="hidden items-center gap-1 md:flex">
           {navLinks.map((link) => {
@@ -60,13 +101,10 @@ export function Header({
               </a>
             );
           })}
-          <div className="ml-1">
-            <ThemeSwitch theme={theme} setTheme={setTheme} />
-          </div>
+          <div className="ml-1" />
         </nav>
 
         <div className="flex items-center gap-2 md:hidden">
-          <ThemeSwitch theme={theme} setTheme={setTheme} />
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="rounded-md p-2 text-muted-foreground transition-colors hover:text-foreground"

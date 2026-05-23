@@ -16,50 +16,50 @@ export function ContactSection() {
           <div className="mt-8">
             <Button size="lg" asChild>
               <OutboundLink
-                href="mailto:hello@bitesinbyte.com"
+                href="mailto:hello@lamplitlabs.com"
                 className="transition-transform hover:scale-105"
-                trackingTarget="hello@bitesinbyte.com"
+                trackingTarget="hello@lamplitlabs.com"
                 trackingContext="contact_email"
-                trackingUrl="mailto:hello@bitesinbyte.com"
+                trackingUrl="mailto:hello@lamplitlabs.com"
               >
                 <Mail className="mr-2 h-5 w-5" />
-                hello@bitesinbyte.com
+                hello@lamplitlabs.com
               </OutboundLink>
             </Button>
           </div>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <OutboundLink
-              href="https://github.com/bitesinbyte"
+              href="https://github.com/lamplitlabs"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-lg border px-4 py-2 text-sm text-muted-foreground transition-colors hover:border-foreground/20 hover:text-foreground"
               trackingTarget="github"
               trackingContext="contact_link"
-              trackingUrl="https://github.com/bitesinbyte"
+              trackingUrl="https://github.com/lamplitlabs"
             >
               <Github className="h-4 w-4" />
               GitHub
             </OutboundLink>
             <OutboundLink
-              href="https://www.linkedin.com/company/bitesinbyte"
+              href="https://www.linkedin.com/company/lamplitlabs"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-lg border px-4 py-2 text-sm text-muted-foreground transition-colors hover:border-foreground/20 hover:text-foreground"
               trackingTarget="linkedin"
               trackingContext="contact_link"
-              trackingUrl="https://www.linkedin.com/company/bitesinbyte"
+              trackingUrl="https://www.linkedin.com/company/lamplitlabs"
             >
               <Linkedin className="h-4 w-4" />
               LinkedIn
             </OutboundLink>
             <OutboundLink
-              href="https://blogs.bitesinbyte.com"
+              href="https://blogs.lamplitlabs.com"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-lg border px-4 py-2 text-sm text-muted-foreground transition-colors hover:border-foreground/20 hover:text-foreground"
               trackingTarget="blog"
               trackingContext="contact_link"
-              trackingUrl="https://blogs.bitesinbyte.com"
+              trackingUrl="https://blogs.lamplitlabs.com"
             >
               <BookOpen className="h-4 w-4" />
               Blog

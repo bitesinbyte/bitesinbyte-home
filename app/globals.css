@@ -4,44 +4,46 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
-    --primary: 240 5.9% 10%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
+    --background: 40 20% 99%;
+    --foreground: 30 10% 8%;
+    --card: 40 20% 99%;
+    --card-foreground: 30 10% 8%;
+    --primary: 36 80% 50%;
+    --primary-foreground: 40 20% 99%;
+    --secondary: 35 15% 94%;
+    --secondary-foreground: 30 10% 8%;
+    --muted: 35 15% 94%;
+    --muted-foreground: 30 8% 46%;
+    --accent: 36 80% 50%;
+    --accent-foreground: 40 20% 99%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 240 5.9% 10%;
+    --border: 35 12% 88%;
+    --input: 35 12% 88%;
+    --ring: 36 80% 50%;
     --radius: 0.75rem;
+    --glow: 36 90% 55%;
   }
 
   .dark {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 5.9% 10%;
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
+    --background: 240 12% 4%;
+    --foreground: 40 15% 95%;
+    --card: 240 10% 6%;
+    --card-foreground: 40 15% 95%;
+    --primary: 38 85% 55%;
+    --primary-foreground: 240 12% 4%;
+    --secondary: 240 8% 12%;
+    --secondary-foreground: 40 15% 95%;
+    --muted: 240 8% 12%;
+    --muted-foreground: 40 8% 60%;
+    --accent: 38 85% 55%;
+    --accent-foreground: 240 12% 4%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
+    --border: 240 8% 14%;
+    --input: 240 8% 14%;
+    --ring: 38 85% 55%;
+    --glow: 38 90% 50%;
   }
 }
 
@@ -107,10 +109,10 @@
 .hero-gradient {
   background: linear-gradient(
     -45deg,
-    hsl(var(--primary) / 0.06),
-    hsl(var(--accent) / 0.12),
-    hsl(var(--primary) / 0.04),
-    hsl(var(--secondary) / 0.1)
+    hsl(36 80% 50% / 0.04),
+    hsl(40 60% 70% / 0.08),
+    hsl(36 80% 50% / 0.03),
+    hsl(35 15% 94% / 0.1)
   );
   background-size: 400% 400%;
   animation: gradient-shift 12s ease infinite;
@@ -119,10 +121,10 @@
 .dark .hero-gradient {
   background: linear-gradient(
     -45deg,
-    hsl(240 10% 8%),
-    hsl(260 10% 6%),
-    hsl(220 10% 7%),
-    hsl(240 10% 5%)
+    hsl(240 12% 5%),
+    hsl(30 15% 6%),
+    hsl(240 12% 4%),
+    hsl(38 10% 5%)
   );
   background-size: 400% 400%;
   animation: gradient-shift 12s ease infinite;
@@ -233,4 +235,56 @@ section[id] {
 
 .card-glow:hover::before {
   opacity: 1;
+}
+
+/* ── Lamp glow effect ──────────────────────────────────── */
+
+@keyframes lamp-pulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 8px hsl(var(--glow) / 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px hsl(var(--glow) / 0.5));
+  }
+}
+
+.lamp-glow {
+  filter: drop-shadow(0 0 12px hsl(var(--glow) / 0.4));
+  animation: lamp-pulse 3s ease-in-out infinite;
+}
+
+.lamp-glow-static {
+  filter: drop-shadow(0 0 8px hsl(var(--glow) / 0.3));
+}
+
+/* ── Pull cord swing ───────────────────────────────────── */
+
+@keyframes cord-pull {
+  0% { transform: translateY(0) translateX(-50%); }
+  20% { transform: translateY(6px) translateX(-50%); }
+  40% { transform: translateY(-2px) translateX(-50%); }
+  60% { transform: translateY(2px) translateX(-50%); }
+  80% { transform: translateY(-1px) translateX(-50%); }
+  100% { transform: translateY(0) translateX(-50%); }
+}
+
+.cord-pull {
+  animation: cord-pull 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97);
+}
+
+/* ── Cord sway / wind animation ────────────────────────── */
+
+@keyframes cord-sway {
+  0%, 100% { transform: translateX(-50%) rotate(0deg); }
+  15% { transform: translateX(-50%) rotate(3deg); }
+  30% { transform: translateX(-50%) rotate(-2.5deg); }
+  45% { transform: translateX(-50%) rotate(2deg); }
+  60% { transform: translateX(-50%) rotate(-1.5deg); }
+  75% { transform: translateX(-50%) rotate(1deg); }
+  90% { transform: translateX(-50%) rotate(-0.5deg); }
+}
+
+.cord-sway {
+  transform-origin: top center;
+  animation: cord-sway 4s ease-in-out infinite;
 }

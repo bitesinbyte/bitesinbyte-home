@@ -36,12 +36,12 @@ export interface SocialLinks {
 }
 
 export const socialLinks: SocialLinks = {
-  instagram: "https://www.instagram.com/bitesinbyte",
-  linkedin: "https://www.linkedin.com/company/bitesinbyte",
-  github: "https://github.com/bitesinbyte",
-  blog: "https://blogs.bitesinbyte.com",
-  mastodon: "https://me.dm/@bitesinbyte",
-  threads: "https://www.threads.net/@bitesinbyte",
+  instagram: "https://www.instagram.com/lamplitlabs",
+  linkedin: "https://www.linkedin.com/company/lamplitlabs",
+  github: "https://github.com/lamplitlabs",
+  blog: "https://blogs.lamplitlabs.com",
+  mastodon: "https://me.dm/@lamplitlabs",
+  threads: "https://www.threads.net/@lamplitlabs",
 };
 
 export const products: Product[] = [
@@ -129,7 +129,7 @@ export const products: Product[] = [
       "A growing collection of browser-based developer utilities, including JSON formatter, Base64, UUID, and more.",
     longDescription:
       "Developer Tools is a practical toolkit for common engineering tasks. It focuses on speed, usability, and free access directly in the browser.",
-    url: "https://tools.bitesinbyte.com",
+    url: "https://tools.lamplitlabs.com",
     cover: "/covers/tools.svg",
     tags: ["Developer Tools", "Utilities", "Web"],
     highlights: [
@@ -148,7 +148,7 @@ export const products: Product[] = [
       "Build professional, ATS-friendly resumes in minutes with clear structure and practical guidance.",
     longDescription:
       "Resume Builder helps job seekers create resumes that read well for both recruiters and applicant tracking systems, improving clarity and discoverability.",
-    url: "https://resume.bitesinbyte.com",
+    url: "https://resume.lamplitlabs.com",
     cover: "/covers/resume.svg",
     tags: ["Productivity", "Career"],
     highlights: [
@@ -166,7 +166,7 @@ export const products: Product[] = [
       "A set of tools for EDMX and OData metadata files, including explorer, trimmer, and conversion utilities.",
     longDescription:
       "EDMX Tools supports teams working with enterprise metadata by making exploration and transformation of EDMX and OData schemas straightforward.",
-    url: "https://edmx.bitesinbyte.com",
+    url: "https://edmx.lamplitlabs.com",
     cover: "/covers/edmx.svg",
     tags: ["Developer Tools", ".NET", "OData"],
     highlights: [
@@ -184,7 +184,7 @@ export const products: Product[] = [
       "Browse Azure service icons for architecture diagrams, synced from official Microsoft icon sets.",
     longDescription:
       "Azure Draw.io Assets provides a searchable catalog of Azure architecture icons so teams can build clean and up-to-date diagrams quickly.",
-    url: "https://azure-assets.bitesinbyte.com",
+    url: "https://azure-assets.lamplitlabs.com",
     cover: "/covers/azure-assets.svg",
     tags: ["Azure", "Draw.io", "Architecture"],
     highlights: [
@@ -202,7 +202,7 @@ export const products: Product[] = [
       "Interactive compliance coverage matrix for Azure services with search and filtering across major frameworks.",
     longDescription:
       "Azure Compliance Matrix helps security and compliance teams explore certification coverage across Azure and Azure Government offerings in one place.",
-    url: "https://azure-compliance.bitesinbyte.com",
+    url: "https://azure-compliance.lamplitlabs.com",
     cover: "/covers/azure-compliance.svg",
     tags: ["Azure", "Compliance", "Security"],
     highlights: [
@@ -217,7 +217,7 @@ export const products: Product[] = [
 export const navLinks: NavLink[] = [
   { label: "Products", href: "#products" },
   { label: "About", href: "#about" },
-  { label: "Blog", href: "https://blogs.bitesinbyte.com", external: true },
+  { label: "Blog", href: "https://blogs.lamplitlabs.com", external: true },
   { label: "Contact", href: "#contact" },
 ];
 

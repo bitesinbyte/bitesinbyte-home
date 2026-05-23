@@ -11,15 +11,15 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: "Bites In Byte - Tools That Solve Real Problems",
-    template: "%s | Bites In Byte",
+    default: "Lamplit Labs - Illuminating Ideas Into Software",
+    template: "%s | Lamplit Labs",
   },
   description:
-    "Bites In Byte builds practical tools that solve real problems. Home of Kenntnistrainer, Fachsprachprufung, Leben in Deutschland, Resume Builder, Developer Tools, EDMX Tools, Azure Draw.io Assets, and Azure Compliance Matrix.",
-  metadataBase: new URL("https://www.bitesinbyte.com"),
+    "Lamplit Labs builds practical tools that solve real problems. Home of Kenntnistrainer, Fachsprachprufung, Leben in Deutschland, Resume Builder, Developer Tools, EDMX Tools, Azure Draw.io Assets, and Azure Compliance Matrix.",
+  metadataBase: new URL("https://www.lamplitlabs.com"),
   keywords: [
-    "Bites In Byte",
-    "bitesinbyte",
+    "Lamplit Labs",
+    "lamplitlabs",
     "Kenntnistrainer",
     "Kenntnisprufung",
     "KP exam",
@@ -46,9 +46,9 @@ export const metadata: Metadata = {
     "HIPAA",
     "PCI DSS",
   ],
-  authors: [{ name: "Bites In Byte", url: "https://www.bitesinbyte.com" }],
-  creator: "Bites In Byte",
-  publisher: "Bites In Byte",
+  authors: [{ name: "Lamplit Labs", url: "https://www.lamplitlabs.com" }],
+  creator: "Lamplit Labs",
+  publisher: "Lamplit Labs",
   robots: {
     index: true,
     follow: true,
@@ -61,14 +61,14 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://www.bitesinbyte.com",
+    canonical: "https://www.lamplitlabs.com",
   },
   openGraph: {
-    title: "Bites In Byte - Tools That Solve Real Problems",
+    title: "Lamplit Labs - Illuminating Ideas Into Software",
     description:
-      "Bites In Byte builds practical tools that solve real problems across education, career, and developer workflows.",
-    url: "https://www.bitesinbyte.com",
-    siteName: "Bites In Byte",
+      "Lamplit Labs builds practical tools that solve real problems across education, career, and developer workflows.",
+    url: "https://www.lamplitlabs.com",
+    siteName: "Lamplit Labs",
     type: "website",
     locale: "en_US",
     images: [
@@ -76,15 +76,15 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Bites In Byte - Tools That Solve Real Problems",
+        alt: "Lamplit Labs - Illuminating Ideas Into Software",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bites In Byte - Tools That Solve Real Problems",
+    title: "Lamplit Labs - Illuminating Ideas Into Software",
     description:
-      "Bites In Byte builds practical tools that solve real problems across education, career, and developer workflows.",
+      "Lamplit Labs builds practical tools that solve real problems across education, career, and developer workflows.",
     images: ["/og-image.png"],
   },
   icons: {
@@ -103,9 +103,9 @@ export const metadata: Metadata = {
 const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "Bites In Byte",
-  url: "https://www.bitesinbyte.com",
-  logo: "https://www.bitesinbyte.com/icon-512.png",
+  name: "Lamplit Labs",
+  url: "https://www.lamplitlabs.com",
+  logo: "https://www.lamplitlabs.com/icon-512.png",
   description:
     "A technology organization building practical tools that solve real problems - from medical exam prep to developer utilities.",
   foundingDate: "2020",
@@ -119,7 +119,7 @@ const organizationJsonLd = {
   ].filter(Boolean),
   contactPoint: {
     "@type": "ContactPoint",
-    email: "hello@bitesinbyte.com",
+    email: "hello@lamplitlabs.com",
     contactType: "customer support",
   },
 };
@@ -127,13 +127,13 @@ const organizationJsonLd = {
 const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "Bites In Byte",
-  url: "https://www.bitesinbyte.com",
-  description: "Bites In Byte builds practical tools that solve real problems.",
+  name: "Lamplit Labs",
+  url: "https://www.lamplitlabs.com",
+  description: "Lamplit Labs builds practical tools that solve real problems.",
   publisher: {
     "@type": "Organization",
-    name: "Bites In Byte",
-    url: "https://www.bitesinbyte.com",
+    name: "Lamplit Labs",
+    url: "https://www.lamplitlabs.com",
   },
 };
 
@@ -147,8 +147,8 @@ const productJsonLd = products.map((product) => ({
   operatingSystem: "Web",
   creator: {
     "@type": "Organization",
-    name: "Bites In Byte",
-    url: "https://www.bitesinbyte.com",
+    name: "Lamplit Labs",
+    url: "https://www.lamplitlabs.com",
   },
 }));
 
@@ -162,7 +162,7 @@ export default function RootLayout({
       <head>
         <Script
           defer
-          data-domain="bitesinbyte.com"
+          data-domain="lamplitlabs.com"
           src="https://plausible.io/js/script.js"
           strategy="afterInteractive"
         />

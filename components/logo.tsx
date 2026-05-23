@@ -1,12 +1,60 @@
-export function Logo({ className }: { className?: string }) {
+export function Logo({
+  className,
+  lit = true,
+  onClick,
+}: {
+  className?: string;
+  lit?: boolean;
+  onClick?: () => void;
+}) {
   return (
     <svg
-      viewBox="0 0 512 512"
+      viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
-      className={className}
-      fill="currentColor"
+      className={`${className ?? ""} transition-all duration-500 ${lit ? "lamp-glow" : ""} ${onClick ? "cursor-pointer" : ""}`}
+      fill="none"
+      onClick={onClick}
+      role={onClick ? "button" : undefined}
+      aria-label={onClick ? (lit ? "Turn off the light" : "Turn on the light") : undefined}
     >
-      <path d="M138.163,465.29c0-34.841,0-68.653,0-103.866c-37.376,0-74.428,0-112.162,0c0-20.669,0-39.916,0-60.618     c37.03,0,73.717,0,111.453,0c0-32.677,0-64.258,0-97.304c-36.668,0-73.367,0-111.103,0c0-20.719,0-40.311,0-61.381     c37.04,0,73.719,0,111.812,0c0-32.319,0-63.565,0-95.535c3.225-0.356,5.387-0.702,7.57-0.702     c61.455,0,123.296-0.717,184.771,0.35c28.784,0.356,56.428,6.554,80.176,24.343c47.812,35.616,54.308,99.115,14.396,143.83     c-3.626,3.96-7.202,7.974-11.528,12.305c21.571,10.183,39.555,23.612,52.486,43.217c37.411,55.193,20.871,126.361-38.096,164.545     c-33.451,21.416-71.185,29.768-109.64,30.818c-58.237,1.836-116.142,0.726-174.395,0.726     C142.479,466.361,141.041,466.013,138.163,465.29L138.163,465.29z M217.265,275.006c0,41.423,0,81.738,0,120.563     c40.632,0,80.881,1.479,120.444-0.708c16.522-1.103,33.795-7.629,48.87-15.619c31.663-17.431,34.172-60.678,4.702-80.974     c-14.012-9.483-30.585-16.348-46.77-20.699C302.824,267.021,260.413,273.221,217.265,275.006L217.265,275.006z M216.929,224.163     c24.433-1.789,47.417-2.141,70.096-5.049c17.229-2.171,34.855-6.2,51.03-12.708c22.266-9.116,33.067-30.13,30.536-52.343     c-2.113-19.946-16.883-36.631-39.155-42.079c-37.037-9.45-74.772-3.659-112.511-5.439     C216.929,146.094,216.929,184.27,216.929,224.163L216.929,224.163z" />
+      {/* Bulb body */}
+      <path
+        d="M12 2C8.13 2 5 5.13 5 9c0 2.61 1.43 4.88 3.5 6.13V17.5c0 .28.22.5.5.5h6c.28 0 .5-.22.5-.5v-2.37C17.57 13.88 19 11.61 19 9c0-3.87-3.13-7-7-7Z"
+        fill={lit ? "hsl(38, 85%, 55%)" : "currentColor"}
+        opacity={lit ? 0.2 : 0.05}
+        stroke="currentColor"
+        strokeWidth="2"
+        className="transition-all duration-500"
+      />
+
+      {/* Base lines */}
+      <line x1="9" y1="20" x2="15" y2="20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <line x1="10" y1="23" x2="14" y2="23" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+
+      {/* Inner glow - only visible when lit */}
+      <circle
+        cx="12"
+        cy="9"
+        r={lit ? 2.5 : 0}
+        fill="hsl(38, 85%, 55%)"
+        opacity={lit ? 0.8 : 0}
+        className="transition-all duration-500"
+      />
+
+      {/* Rays - only when lit */}
+      <g
+        stroke="hsl(38, 85%, 55%)"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        opacity={lit ? 0.5 : 0}
+        className="transition-all duration-500"
+      >
+        <line x1="12" y1="0" x2="12" y2="-2" />
+        <line x1="5" y1="4" x2="3.5" y2="2.5" />
+        <line x1="19" y1="4" x2="20.5" y2="2.5" />
+        <line x1="2" y1="9" x2="0" y2="9" />
+        <line x1="22" y1="9" x2="24" y2="9" />
+      </g>
     </svg>
   );
 }
