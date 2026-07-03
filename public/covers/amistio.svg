@@ -25,13 +25,15 @@
 
     <!-- Left: talk to Ami (voice bubble) -->
     <g transform="translate(92, 118)" opacity="0.24">
-        <path d="M18 0H132A18 18 0 0 1 150 18V96A18 18 0 0 1 132 114H54L30 140V114H18A18 18 0 0 1 0 96V18A18 18 0 0 1 18 0Z"
+        <path
+            d="M18 0H132A18 18 0 0 1 150 18V96A18 18 0 0 1 132 114H54L30 140V114H18A18 18 0 0 1 0 96V18A18 18 0 0 1 18 0Z"
             stroke="#fff" stroke-width="4" fill="rgba(255,255,255,0.06)" />
         <line x1="40" y1="45" x2="40" y2="69" stroke="#fff" stroke-width="5" stroke-linecap="round" />
         <line x1="58" y1="33" x2="58" y2="81" stroke="#fff" stroke-width="5" stroke-linecap="round" />
         <line x1="76" y1="50" x2="76" y2="64" stroke="#fff" stroke-width="5" stroke-linecap="round" />
         <line x1="94" y1="29" x2="94" y2="85" stroke="#fff" stroke-width="5" stroke-linecap="round" />
-        <line x1="112" y1="46" x2="112" y2="68" stroke="#fff" stroke-width="5" stroke-linecap="round" />
+        <line x1="112" y1="46" x2="112" y2="68" stroke="#fff" stroke-width="5"
+            stroke-linecap="round" />
     </g>
 
     <!-- Central: learning Journey path -->
