@@ -48,19 +48,19 @@ export const products: Product[] = [
   {
     slug: "amistio",
     name: "Amistio",
-    title: "Project brain mission control for local-runner execution",
+    title: "A personal AI teacher for anything you want to learn",
     description:
-      "Project brain mission control for turning product intent into decisions, plans, prompts, and approved local-runner execution.",
+      "Talk to Ami and a team of AI teaching agents that plan your learning Journey, assign and grade real practice, and adapt to you — for any subject.",
     longDescription:
-      "Amistio turns product intent into decisions, plans, prompts, and approved local-runner execution. It helps teams review the project brain before implementation, sync approved Markdown into the repository, and run source changes through a paired local runner.",
+      "Amistio is a general-purpose learning platform built around a real learning loop: you talk, Ami plans, you practice, your work gets graded, and the next step adapts to how you did. The same loop serves languages, coding, math, music, and exam prep through pluggable subject packs. Start from scratch or bring your own notes, slides, or syllabus and get a structured, graded Journey built around them.",
     url: "https://www.amistio.com",
     cover: "/covers/amistio.svg",
-    tags: ["AI", "Planning", "Local Runner"],
+    tags: ["AI", "Learning", "Education"],
     highlights: [
-      { title: "Project Brain", description: "Capture the why, plan, constraints, prompts, and lessons as durable project context." },
-      { title: "Review Before Execution", description: "Turn wishes into reviewable ADRs, plans, specs, and implementation prompts before work runs." },
-      { title: "Repo-Portable Markdown", description: "Sync approved brain documents into the repository so project knowledge stays versioned with the code." },
-      { title: "Local Runner", description: "Coordinate work in the web app while source, secrets, and toolchains stay on the paired machine." },
+      { title: "Any Subject", description: "One platform for languages, code, math, music, and exam prep. New subjects ship as packs, so the catalog keeps growing." },
+      { title: "Bring Your Own Materials", description: "Import your notes, slides, PDFs, or a syllabus and Ami builds a structured, graded Journey around them." },
+      { title: "Graded Feedback", description: "Assignments are scored against real rubrics with specific, actionable feedback — not a generic 'good job'." },
+      { title: "Adapts to You", description: "Difficulty, pace, and focus follow your stated preferences and your actual results, session after session." },
     ],
     featured: true,
   },

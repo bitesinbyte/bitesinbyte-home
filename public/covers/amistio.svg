@@ -23,57 +23,53 @@
     <circle cx="690" cy="82" r="116" fill="rgba(255,255,255,0.045)" />
     <circle cx="112" cy="324" r="82" fill="rgba(255,255,255,0.04)" />
 
-    <!-- Left project brain stack -->
-    <g transform="translate(94, 80)" opacity="0.22">
-        <rect x="0" y="0" width="150" height="190" rx="18" stroke="#fff" stroke-width="4"
-            fill="rgba(255,255,255,0.06)" />
-        <path d="M28 46H122" stroke="#fff" stroke-width="6" stroke-linecap="round" />
-        <path d="M28 84H104" stroke="#fff" stroke-width="6" stroke-linecap="round" />
-        <path d="M28 122H116" stroke="#fff" stroke-width="6" stroke-linecap="round" />
-        <path d="M28 160H88" stroke="#fff" stroke-width="6" stroke-linecap="round" />
+    <!-- Left: talk to Ami (voice bubble) -->
+    <g transform="translate(92, 118)" opacity="0.24">
+        <path d="M18 0H132A18 18 0 0 1 150 18V96A18 18 0 0 1 132 114H54L30 140V114H18A18 18 0 0 1 0 96V18A18 18 0 0 1 18 0Z"
+            stroke="#fff" stroke-width="4" fill="rgba(255,255,255,0.06)" />
+        <line x1="40" y1="45" x2="40" y2="69" stroke="#fff" stroke-width="5" stroke-linecap="round" />
+        <line x1="58" y1="33" x2="58" y2="81" stroke="#fff" stroke-width="5" stroke-linecap="round" />
+        <line x1="76" y1="50" x2="76" y2="64" stroke="#fff" stroke-width="5" stroke-linecap="round" />
+        <line x1="94" y1="29" x2="94" y2="85" stroke="#fff" stroke-width="5" stroke-linecap="round" />
+        <line x1="112" y1="46" x2="112" y2="68" stroke="#fff" stroke-width="5" stroke-linecap="round" />
     </g>
 
-    <!-- Central workflow cards -->
-    <g transform="translate(265, 72)">
-        <rect x="0" y="0" width="120" height="86" rx="14" fill="rgba(255,255,255,0.14)"
-            stroke="rgba(255,255,255,0.28)" stroke-width="2" />
-        <text x="60" y="42" font-family="system-ui, -apple-system, sans-serif" font-size="18"
-            fill="rgba(255,255,255,0.78)" text-anchor="middle" font-weight="700">WISH</text>
-        <text x="60" y="62" font-family="system-ui, sans-serif" font-size="10"
-            fill="rgba(255,255,255,0.46)" text-anchor="middle">intent</text>
-
-        <rect x="150" y="0" width="120" height="86" rx="14" fill="rgba(255,255,255,0.14)"
-            stroke="rgba(255,255,255,0.28)" stroke-width="2" />
-        <text x="210" y="42" font-family="system-ui, -apple-system, sans-serif" font-size="18"
-            fill="rgba(255,255,255,0.78)" text-anchor="middle" font-weight="700">ADR</text>
-        <text x="210" y="62" font-family="system-ui, sans-serif" font-size="10"
-            fill="rgba(255,255,255,0.46)" text-anchor="middle">decision</text>
-
-        <rect x="75" y="118" width="120" height="86" rx="14" fill="rgba(255,255,255,0.14)"
-            stroke="rgba(255,255,255,0.28)" stroke-width="2" />
-        <text x="135" y="160" font-family="system-ui, -apple-system, sans-serif" font-size="18"
-            fill="rgba(255,255,255,0.78)" text-anchor="middle" font-weight="700">PLAN</text>
-        <text x="135" y="180" font-family="system-ui, sans-serif" font-size="10"
-            fill="rgba(255,255,255,0.46)" text-anchor="middle">approval</text>
-
-        <path d="M120 43H150" stroke="rgba(255,255,255,0.45)" stroke-width="3"
-            stroke-linecap="round" />
-        <path d="M190 86L154 118" stroke="rgba(255,255,255,0.45)" stroke-width="3"
-            stroke-linecap="round" />
-        <path d="M80 86L112 118" stroke="rgba(255,255,255,0.45)" stroke-width="3"
-            stroke-linecap="round" />
+    <!-- Central: learning Journey path -->
+    <g transform="translate(282, 70)">
+        <path d="M0 120C40 120 50 40 90 40C130 40 140 120 180 120C220 120 230 40 270 40"
+            stroke="rgba(255,255,255,0.4)" stroke-width="3" stroke-linecap="round"
+            stroke-dasharray="2 12" fill="none" />
+        <g font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700"
+            text-anchor="middle" fill="rgba(255,255,255,0.82)">
+            <circle cx="0" cy="120" r="20" fill="rgba(255,255,255,0.14)"
+                stroke="rgba(255,255,255,0.3)" stroke-width="2" />
+            <text x="0" y="127">1</text>
+            <circle cx="90" cy="40" r="20" fill="rgba(255,255,255,0.14)"
+                stroke="rgba(255,255,255,0.3)" stroke-width="2" />
+            <text x="90" y="47">2</text>
+            <circle cx="180" cy="120" r="20" fill="rgba(255,255,255,0.14)"
+                stroke="rgba(255,255,255,0.3)" stroke-width="2" />
+            <text x="180" y="127">3</text>
+            <circle cx="270" cy="40" r="22" fill="rgba(255,255,255,0.2)"
+                stroke="rgba(255,255,255,0.4)" stroke-width="2" />
+            <path d="M261 40L268 47L280 33" stroke="#fff" stroke-width="3"
+                stroke-linecap="round" stroke-linejoin="round" fill="none" />
+        </g>
     </g>
 
-    <!-- Right local runner terminal -->
-    <g transform="translate(572, 108)" opacity="0.28">
-        <rect x="0" y="0" width="132" height="102" rx="14" stroke="#fff" stroke-width="3"
+    <!-- Right: graded feedback card -->
+    <g transform="translate(572, 110)" opacity="0.28">
+        <rect x="0" y="0" width="132" height="108" rx="14" stroke="#fff" stroke-width="3"
             fill="rgba(255,255,255,0.08)" />
-        <circle cx="22" cy="22" r="4" fill="#fff" />
-        <circle cx="38" cy="22" r="4" fill="#fff" />
-        <circle cx="54" cy="22" r="4" fill="#fff" />
-        <path d="M22 58L42 72L22 86" stroke="#fff" stroke-width="4" stroke-linecap="round"
-            stroke-linejoin="round" />
-        <path d="M58 84H104" stroke="#fff" stroke-width="4" stroke-linecap="round" />
+        <circle cx="30" cy="30" r="14" stroke="#fff" stroke-width="3" fill="none" />
+        <path d="M23 30L28 35L38 24" stroke="#fff" stroke-width="3" stroke-linecap="round"
+            stroke-linejoin="round" fill="none" />
+        <path d="M56 25H110" stroke="#fff" stroke-width="4" stroke-linecap="round" />
+        <path d="M56 41H94" stroke="#fff" stroke-width="4" stroke-linecap="round" />
+        <path d="M20 72H112" stroke="rgba(255,255,255,0.35)" stroke-width="6" stroke-linecap="round" />
+        <path d="M20 72H82" stroke="#fff" stroke-width="6" stroke-linecap="round" />
+        <path d="M20 90H112" stroke="rgba(255,255,255,0.35)" stroke-width="6" stroke-linecap="round" />
+        <path d="M20 90H60" stroke="#fff" stroke-width="6" stroke-linecap="round" />
     </g>
 
     <!-- Title -->
