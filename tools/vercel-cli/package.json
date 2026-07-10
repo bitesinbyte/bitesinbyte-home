@@ -1,0 +1,7 @@
+{
+  "name": "bitesinbyte-vercel-cli",
+  "private": true,
+  "dependencies": {
+    "vercel": "55.0.0"
+  }
+}
