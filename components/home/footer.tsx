@@ -1,5 +1,5 @@
-import { Github, Instagram, Linkedin } from "lucide-react";
 import type { ComponentType } from "react";
+import { XIcon } from "@/components/icons";
 import { OutboundLink } from "@/components/outbound-link";
 import { navLinks, products, socialLinks } from "@/lib/site-data";
 import { Logo } from "@/components/logo";
@@ -9,10 +9,8 @@ const footerSocialLinks: {
   icon: ComponentType<{ className?: string }>;
   label: string;
 }[] = [
-  { href: socialLinks.github, icon: Github, label: "GitHub" },
-  { href: socialLinks.linkedin, icon: Linkedin, label: "LinkedIn" },
-  { href: socialLinks.instagram, icon: Instagram, label: "Instagram" },
-].flatMap((item) => (item.href ? [{ ...item, href: item.href }] : []));
+  { href: socialLinks.x, icon: XIcon, label: "X" },
+];
 
 export function Footer() {
   return (
