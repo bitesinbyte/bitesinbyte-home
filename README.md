@@ -1,6 +1,8 @@
-# Bites In Byte
+# Lamplit Labs
 
-The official website for [Bites In Byte](https://www.bitesinbyte.com) — a technology organization building practical tools that solve real problems.
+The official website for [Lamplit Labs](https://www.lamplitlabs.com) — a technology organization building practical tools that solve real problems.
+
+Formerly known as Bites In Byte.
 
 From medical exam prep for doctors in Germany to citizenship test tools, career resources, and developer utilities — small, practical software packed into every byte.
 
@@ -11,9 +13,9 @@ From medical exam prep for doctors in Germany to citizenship test tools, career 
 | **Kenntnistrainer** | KI-gestützte Kenntnisprüfung simulation & training for foreign doctors in Germany | [kenntnistrainer.de](https://www.kenntnistrainer.de) |
 | **Fachsprachprüfung** | KI-gestützte FSP simulation & training for foreign doctors in Germany _(coming soon)_ | — |
 | **Leben in Deutschland** | German citizenship test (Einbürgerungstest) prep with 310 questions | [lebenindeutschland.org](https://www.lebenindeutschland.org) |
-| **Resume Builder** | ATS-optimized resume builder | [resume.bitesinbyte.com](https://resume.bitesinbyte.com) |
-| **Developer Tools** | Everyday developer utilities — JSON formatter, Base64, UUID, and more | [tools.bitesinbyte.com](https://tools.bitesinbyte.com) |
-| **EDMX Tools** | Tools for EDMX/OData metadata files | [edmx.bitesinbyte.com](https://edmx.bitesinbyte.com) |
+| **Resume Builder** | ATS-optimized resume builder | [resume.lamplitlabs.com](https://resume.lamplitlabs.com) |
+| **Developer Tools** | Everyday developer utilities — JSON formatter, Base64, UUID, and more | [tools.lamplitlabs.com](https://tools.lamplitlabs.com) |
+| **EDMX Tools** | Tools for EDMX/OData metadata files | [edmx.lamplitlabs.com](https://edmx.lamplitlabs.com) |
 
 Each product lives in its own repository and is deployed independently.
 
@@ -62,16 +64,16 @@ public/         → Static assets (favicons, product cover SVGs, OG image)
 
 Pushes to `main` automatically deploy to GitHub Pages via the workflow in `.github/workflows/deploy.yml`.
 
-The site is served at [www.bitesinbyte.com](https://www.bitesinbyte.com) via the `CNAME` file.
+The site is served at [www.lamplitlabs.com](https://www.lamplitlabs.com) via the `CNAME` file.
 
 ## Connect
 
-- [GitHub](https://github.com/bitesinbyte)
-- [LinkedIn](https://www.linkedin.com/company/bitesinbyte)
-- [Instagram](https://www.instagram.com/bitesinbyte)
-- [Mastodon](https://me.dm/@bitesinbyte)
-- [Threads](https://www.threads.net/@bitesinbyte)
-- [Blog](https://blogs.bitesinbyte.com)
+- [GitHub](https://github.com/lamplitlabs)
+- [LinkedIn](https://www.linkedin.com/company/lamplitlabs)
+- [Instagram](https://www.instagram.com/lamplitlabs)
+- [Mastodon](https://me.dm/@lamplitlabs)
+- [Threads](https://www.threads.net/@lamplitlabs)
+- [Blog](https://blogs.lamplitlabs.com)
 
 ## License
 

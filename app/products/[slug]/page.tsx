@@ -28,7 +28,7 @@ export function generateMetadata({ params }: ProductPageProps): Metadata {
 
   const title = `${product.name} - ${product.title}`;
   const description = product.longDescription;
-  const canonicalUrl = `https://www.bitesinbyte.com/products/${product.slug}`;
+  const canonicalUrl = `https://www.lamplitlabs.com/products/${product.slug}`;
 
   return {
     title,
@@ -66,11 +66,11 @@ function ProductJsonLd({ slug }: { slug: string }) {
     applicationCategory: "UtilitiesApplication",
     description: product.longDescription,
     operatingSystem: "Web",
-    image: `https://www.bitesinbyte.com${product.cover}`,
+    image: `https://www.lamplitlabs.com${product.cover}`,
     creator: {
       "@type": "Organization",
-      name: "Bites In Byte",
-      url: "https://www.bitesinbyte.com",
+      name: "Lamplit Labs",
+      url: "https://www.lamplitlabs.com",
     },
   };
 
@@ -102,7 +102,7 @@ export default function ProductPage({ params }: ProductPageProps) {
           >
             <ArrowLeft className="h-4 w-4" />
             <Logo className="h-6 w-6" />
-            <span className="hidden sm:inline">Bites In Byte</span>
+            <span className="hidden sm:inline">Lamplit Labs</span>
           </a>
           <OutboundLink
             href={product.url}
@@ -261,10 +261,10 @@ export default function ProductPage({ params }: ProductPageProps) {
             className="inline-flex items-center gap-2 transition-colors hover:text-foreground"
           >
             <Logo className="h-5 w-5" />
-            Bites In Byte
+            Lamplit Labs
           </a>
           <p className="mt-2">
-            &copy; {new Date().getFullYear()} Bites In Byte. All rights reserved.
+            &copy; {new Date().getFullYear()} Lamplit Labs. All rights reserved.
           </p>
         </div>
       </footer>
