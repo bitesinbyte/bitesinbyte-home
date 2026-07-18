@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
+import { EasterEggs } from "@/components/easter-eggs";
 import { AboutSection } from "@/components/home/about-section";
 import { ContactSection } from "@/components/home/contact-section";
 import { Footer } from "@/components/home/footer";
@@ -77,6 +78,7 @@ export default function Home() {
       <AboutSection />
       <ContactSection />
       <Footer />
+      <EasterEggs />
     </div>
   );
 }

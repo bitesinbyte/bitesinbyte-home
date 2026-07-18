@@ -194,6 +194,63 @@
     0 0 64px hsl(var(--glow) / 0.2);
 }
 
+/* ── Easter eggs ───────────────────────────────────────── */
+
+/* "lumos" — a warm flash washes over the page */
+@keyframes spell-burst {
+  0% { opacity: 0; }
+  18% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.spell-lumos {
+  background: radial-gradient(
+    ellipse 70% 55% at 50% 30%,
+    hsl(42 95% 62% / 0.5),
+    transparent 70%
+  );
+  animation: spell-burst 1.1s ease-out forwards;
+}
+
+/* "nox" — darkness closes in from the edges */
+.spell-nox {
+  background: radial-gradient(
+    ellipse 90% 80% at 50% 40%,
+    transparent 30%,
+    hsl(240 15% 2% / 0.75) 100%
+  );
+  animation: spell-burst 1.1s ease-out forwards;
+}
+
+/* Overheated bulb — pulled the cord too many times */
+@keyframes bulb-flicker {
+  0%, 100% { opacity: 1; }
+  8% { opacity: 0.3; }
+  14% { opacity: 1; }
+  22% { opacity: 0.15; }
+  30% { opacity: 0.9; }
+  44% { opacity: 0.4; }
+  52% { opacity: 1; }
+  70% { opacity: 0.6; }
+  80% { opacity: 1; }
+}
+
+.bulb-flicker {
+  animation: bulb-flicker 1.4s linear 2;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spell-lumos,
+  .spell-nox,
+  .bulb-flicker {
+    animation: none;
+  }
+  .spell-lumos,
+  .spell-nox {
+    opacity: 0;
+  }
+}
+
 /* ── Section scroll offset for fixed header ────────────── */
 
 section[id] {

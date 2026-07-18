@@ -1,10 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 /**
  * Pendant-lamp theme toggle. Light mode = lamp on (beam visible),
  * dark mode = lamp off. Users pull the cord to switch.
+ *
+ * Easter egg: yank the cord six times in a few seconds and the
+ * bulb "overheats" — it flickers and complains before recovering.
  */
 export function LampToggle({
   theme,
@@ -14,12 +17,22 @@ export function LampToggle({
   setTheme: (theme: string) => void;
 }) {
   const [pulling, setPulling] = useState(false);
+  const [overheated, setOverheated] = useState(false);
+  const pullTimes = useRef<number[]>([]);
   const lit = theme !== "dark";
 
   const handlePull = () => {
     setPulling(true);
     setTheme(theme === "dark" ? "light" : "dark");
     setTimeout(() => setPulling(false), 500);
+
+    const now = Date.now();
+    pullTimes.current = [...pullTimes.current.filter((t) => now - t < 4000), now];
+    if (pullTimes.current.length >= 6 && !overheated) {
+      pullTimes.current = [];
+      setOverheated(true);
+      setTimeout(() => setOverheated(false), 3200);
+    }
   };
 
   return (
@@ -31,7 +44,7 @@ export function LampToggle({
     >
       <svg
         viewBox="0 0 36 40"
-        className={`h-10 w-9 transition-all duration-500 ${lit ? "lamp-glow-static" : ""}`}
+        className={`h-10 w-9 transition-all duration-500 ${lit ? "lamp-glow-static" : ""} ${overheated ? "bulb-flicker" : ""}`}
         fill="none"
       >
         {/* Ceiling cord */}
@@ -99,6 +112,15 @@ export function LampToggle({
           />
         </svg>
       </div>
+
+      {overheated && (
+        <span
+          role="status"
+          className="mobile-menu-enter absolute right-0 top-full z-50 mt-3 whitespace-nowrap rounded-md border bg-background px-2.5 py-1.5 text-xs text-muted-foreground shadow-md"
+        >
+          Easy there &mdash; you&apos;ll burn out the bulb.
+        </span>
+      )}
     </button>
   );
 }
