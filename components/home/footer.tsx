@@ -1,6 +1,5 @@
 import { Github, Instagram, Linkedin } from "lucide-react";
 import type { ComponentType } from "react";
-import { MastodonIcon, ThreadsIcon } from "@/components/icons";
 import { OutboundLink } from "@/components/outbound-link";
 import { navLinks, products, socialLinks } from "@/lib/site-data";
 import { Logo } from "@/components/logo";
@@ -13,8 +12,6 @@ const footerSocialLinks: {
   { href: socialLinks.github, icon: Github, label: "GitHub" },
   { href: socialLinks.linkedin, icon: Linkedin, label: "LinkedIn" },
   { href: socialLinks.instagram, icon: Instagram, label: "Instagram" },
-  { href: socialLinks.mastodon, icon: MastodonIcon, label: "Mastodon" },
-  { href: socialLinks.threads, icon: ThreadsIcon, label: "Threads" },
 ].flatMap((item) => (item.href ? [{ ...item, href: item.href }] : []));
 
 export function Footer() {

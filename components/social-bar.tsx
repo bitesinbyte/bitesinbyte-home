@@ -7,7 +7,6 @@ import {
   Twitter,
   ExternalLink,
 } from "lucide-react";
-import { MastodonIcon, ThreadsIcon } from "@/components/icons";
 import { Button } from "@/components/ui/button";
 import { OutboundLink } from "@/components/outbound-link";
 import type { SocialLinks } from "@/lib/site-data";
@@ -19,8 +18,6 @@ const socialIconMap: Record<string, React.ElementType> = {
   youtube: Youtube,
   twitter: Twitter,
   blog: BookOpen,
-  mastodon: MastodonIcon,
-  threads: ThreadsIcon,
 };
 
 interface SocialBarProps {

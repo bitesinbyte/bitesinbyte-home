@@ -31,8 +31,6 @@ export interface SocialLinks {
   twitter?: string;
   blog?: string;
   web?: string;
-  mastodon?: string;
-  threads?: string;
 }
 
 export const socialLinks: SocialLinks = {
@@ -40,8 +38,6 @@ export const socialLinks: SocialLinks = {
   linkedin: "https://www.linkedin.com/company/lamplitlabs",
   github: "https://github.com/lamplitlabs",
   blog: "https://blogs.lamplitlabs.com",
-  mastodon: "https://me.dm/@lamplitlabs",
-  threads: "https://www.threads.net/@lamplitlabs",
 };
 
 export const products: Product[] = [
