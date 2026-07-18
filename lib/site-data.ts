@@ -24,20 +24,11 @@ export interface NavLink {
 }
 
 export interface SocialLinks {
-  instagram?: string;
-  linkedin?: string;
-  github?: string;
-  youtube?: string;
-  twitter?: string;
-  blog?: string;
-  web?: string;
+  x: string;
 }
 
 export const socialLinks: SocialLinks = {
-  instagram: "https://www.instagram.com/lamplitlabs",
-  linkedin: "https://www.linkedin.com/company/lamplitlabs",
-  github: "https://github.com/lamplitlabs",
-  blog: "https://blogs.lamplitlabs.com",
+  x: "https://x.com/lamplitlabs",
 };
 
 export const products: Product[] = [

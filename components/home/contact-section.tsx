@@ -1,7 +1,9 @@
-import { BookOpen, Github, Linkedin, Mail } from "lucide-react";
+import { BookOpen, Github, Mail } from "lucide-react";
+import { XIcon } from "@/components/icons";
 import { OutboundLink } from "@/components/outbound-link";
 import { Button } from "@/components/ui/button";
 import { RevealSection } from "@/components/home/reveal-section";
+import { socialLinks } from "@/lib/site-data";
 
 export function ContactSection() {
   return (
@@ -41,16 +43,16 @@ export function ContactSection() {
               GitHub
             </OutboundLink>
             <OutboundLink
-              href="https://www.linkedin.com/company/lamplitlabs"
+              href={socialLinks.x}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-lg border px-4 py-2 text-sm text-muted-foreground transition-colors hover:border-foreground/20 hover:text-foreground"
-              trackingTarget="linkedin"
+              trackingTarget="x"
               trackingContext="contact_link"
-              trackingUrl="https://www.linkedin.com/company/lamplitlabs"
+              trackingUrl={socialLinks.x}
             >
-              <Linkedin className="h-4 w-4" />
-              LinkedIn
+              <XIcon className="h-4 w-4" />
+              X
             </OutboundLink>
             <OutboundLink
               href="https://blogs.lamplitlabs.com"
