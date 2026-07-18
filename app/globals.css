@@ -95,39 +95,37 @@
   }
 }
 
-/* ── Animated gradient background for hero ─────────────── */
+/* ── Lamplight pool behind the hero ────────────────────── */
+/* A still cone of warm light from above — the page's one motif.
+   Subtle over the light theme, load-bearing in the dark theme. */
 
-@keyframes gradient-shift {
-  0%, 100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
+.hero-lamplight {
+  background:
+    radial-gradient(
+      ellipse 55% 42% at 50% 8%,
+      hsl(38 85% 58% / 0.13),
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 90% 60% at 50% 0%,
+      hsl(40 70% 65% / 0.07),
+      transparent 75%
+    );
 }
 
-.hero-gradient {
-  background: linear-gradient(
-    -45deg,
-    hsl(36 80% 50% / 0.04),
-    hsl(40 60% 70% / 0.08),
-    hsl(36 80% 50% / 0.03),
-    hsl(35 15% 94% / 0.1)
-  );
-  background-size: 400% 400%;
-  animation: gradient-shift 12s ease infinite;
-}
-
-.dark .hero-gradient {
-  background: linear-gradient(
-    -45deg,
-    hsl(240 12% 5%),
-    hsl(30 15% 6%),
-    hsl(240 12% 4%),
-    hsl(38 10% 5%)
-  );
-  background-size: 400% 400%;
-  animation: gradient-shift 12s ease infinite;
+.dark .hero-lamplight {
+  background:
+    radial-gradient(
+      ellipse 50% 40% at 50% 6%,
+      hsl(38 90% 55% / 0.16),
+      transparent 68%
+    ),
+    radial-gradient(
+      ellipse 95% 65% at 50% 0%,
+      hsl(38 80% 50% / 0.07),
+      transparent 78%
+    ),
+    hsl(240 12% 4%);
 }
 
 /* ── Mobile menu animation ─────────────────────────────── */
@@ -176,15 +174,6 @@
   }
 }
 
-@keyframes hero-glow-pulse {
-  0%, 100% {
-    box-shadow: 0 0 20px hsl(var(--primary) / 0.05);
-  }
-  50% {
-    box-shadow: 0 0 40px hsl(var(--primary) / 0.1);
-  }
-}
-
 .hero-entrance {
   opacity: 0;
   animation: hero-fade-up 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
@@ -196,14 +185,13 @@
 .hero-entrance-4 { animation-delay: 0.7s; }
 .hero-entrance-5 { animation-delay: 0.9s; }
 
-.hero-badge-glow {
-  animation: hero-fade-up 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards,
-             hero-glow-pulse 3s ease-in-out 1s infinite;
-}
+/* ── Lamplit text — words caught in the lamp's glow ────── */
 
-.hero-title-gradient {
-  background-size: 200% auto;
-  animation: gradient-shift 4s ease infinite;
+.lamplit-text {
+  color: hsl(var(--primary));
+  text-shadow:
+    0 0 24px hsl(var(--glow) / 0.35),
+    0 0 64px hsl(var(--glow) / 0.2);
 }
 
 /* ── Section scroll offset for fixed header ────────────── */

@@ -141,7 +141,7 @@ export default function ProductPage({ params }: ProductPageProps) {
             ))}
           </div>
 
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+          <h1 className="font-display text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
             {product.name}
           </h1>
           <p className="mt-4 max-w-2xl text-xl text-muted-foreground sm:text-2xl">

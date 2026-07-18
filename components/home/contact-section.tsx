@@ -8,7 +8,7 @@ export function ContactSection() {
     <section id="contact" className="border-t">
       <div className="mx-auto max-w-3xl px-4 py-24 text-center">
         <RevealSection>
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Get in Touch</h2>
+          <h2 className="font-display text-3xl font-semibold tracking-tight sm:text-4xl">Get in Touch</h2>
           <p className="mx-auto mt-6 max-w-lg text-lg text-muted-foreground">
             Have a question, suggestion, or want to collaborate? We&apos;d love to
             hear from you.

@@ -22,7 +22,7 @@
           fill="#0a0a0f" />
   </g>
 
-  <text x="600" y="425" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="64" font-weight="700" fill="#fafafa">Lamplit Labs</text>
-  <text x="600" y="475" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="26" fill="#a1a1aa">Illuminating ideas into software</text>
+  <text x="600" y="425" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="66" font-weight="600" fill="#fafafa">Lamplit Labs</text>
+  <text x="600" y="478" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="26" fill="#a1a1aa">Practical tools for real problems</text>
   <text x="600" y="575" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#71717a">lamplitlabs.com</text>
 </svg>

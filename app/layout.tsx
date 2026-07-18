@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Fraunces, Inter } from "next/font/google";
 import Script from "next/script";
 import { CookieConsent } from "@/components/cookie-consent";
 import { GoogleAnalytics } from "@/components/google-analytics";
@@ -8,10 +8,15 @@ import { Providers } from "./providers";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  variable: "--font-display",
+  axes: ["opsz"],
+});
 
 export const metadata: Metadata = {
   title: {
-    default: "Lamplit Labs - Illuminating Ideas Into Software",
+    default: "Lamplit Labs - Practical Tools for Real Problems",
     template: "%s | Lamplit Labs",
   },
   description:
@@ -64,7 +69,7 @@ export const metadata: Metadata = {
     canonical: "https://www.lamplitlabs.com",
   },
   openGraph: {
-    title: "Lamplit Labs - Illuminating Ideas Into Software",
+    title: "Lamplit Labs - Practical Tools for Real Problems",
     description:
       "Lamplit Labs builds practical tools that solve real problems across education, career, and developer workflows.",
     url: "https://www.lamplitlabs.com",
@@ -76,13 +81,13 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Lamplit Labs - Illuminating Ideas Into Software",
+        alt: "Lamplit Labs - Practical Tools for Real Problems",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Lamplit Labs - Illuminating Ideas Into Software",
+    title: "Lamplit Labs - Practical Tools for Real Problems",
     description:
       "Lamplit Labs builds practical tools that solve real problems across education, career, and developer workflows.",
     images: ["/og-image.png"],
@@ -182,7 +187,7 @@ export default function RootLayout({
           />
         ))}
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.className} ${fraunces.variable}`}>
         <Providers>
           {children}
           <GoogleAnalytics />

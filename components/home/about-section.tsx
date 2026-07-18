@@ -29,7 +29,7 @@ export function AboutSection() {
     <section id="about" className="border-t">
       <div className="mx-auto max-w-5xl px-4 py-24">
         <RevealSection className="mb-14 text-center">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">About Us</h2>
+          <h2 className="font-display text-3xl font-semibold tracking-tight sm:text-4xl">About Us</h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
             Lamplit Labs is a technology organization focused on building practical
             tools that solve real problems and make a tangible difference in

@@ -10,7 +10,7 @@ export function WhyLamplitSection() {
             <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-sm text-primary">
               Our Story
             </div>
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            <h2 className="font-display text-3xl font-semibold tracking-tight sm:text-4xl">
               Why &ldquo;Lamplit Labs&rdquo;?
             </h2>
           </div>
