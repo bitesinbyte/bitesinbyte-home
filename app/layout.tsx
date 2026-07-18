@@ -118,8 +118,6 @@ const organizationJsonLd = {
     socialLinks.github,
     socialLinks.instagram,
     socialLinks.linkedin,
-    socialLinks.mastodon,
-    socialLinks.threads,
     socialLinks.blog,
   ].filter(Boolean),
   contactPoint: {
