@@ -24,7 +24,7 @@ Each product lives in its own repository and is deployed independently.
 - [Next.js 14](https://nextjs.org/) — static export (`output: "export"`)
 - [Tailwind CSS](https://tailwindcss.com/) + [shadcn/ui](https://ui.shadcn.com/) patterns
 - [TypeScript](https://www.typescriptlang.org/)
-- Deployed to [GitHub Pages](https://pages.github.com/)
+- Deployed to [Vercel](https://vercel.com/)
 
 ## Getting Started
 
@@ -57,14 +57,14 @@ components/     → UI components (product grid, hero globe, social bar, etc.)
 hooks/          → Custom React hooks
 lib/            → Utility functions
 public/         → Static assets (favicons, product cover SVGs, OG image)
-.github/        → GitHub Actions workflow for deployment
+.github/        → GitHub Actions workflows for CI and Vercel deployment
 ```
 
 ## Deployment
 
-Pushes to `main` automatically deploy to GitHub Pages via the workflow in `.github/workflows/deploy.yml`.
+Pushes to `main` automatically deploy to Vercel via the workflow in `.github/workflows/deploy-web-vercel.yml`.
 
-The site is served at [www.lamplitlabs.com](https://www.lamplitlabs.com) via the `CNAME` file.
+The canonical production endpoints are [lamplitlabs.com](https://lamplitlabs.com) and [www.lamplitlabs.com](https://www.lamplitlabs.com), both served by Vercel.
 
 ## Connect
 
