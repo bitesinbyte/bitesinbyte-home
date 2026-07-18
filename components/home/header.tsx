@@ -1,7 +1,7 @@
 "use client";
 
 import { Menu, X } from "lucide-react";
-import { ThemeSwitch } from "@/components/theme-switch";
+import { LampToggle } from "@/components/lamp-toggle";
 import { Logo } from "@/components/logo";
 import { navLinks } from "@/lib/site-data";
 
@@ -24,19 +24,19 @@ export function Header({
 }: HeaderProps) {
   return (
     <header
-      className={`fixed top-0 z-50 w-full transition-all duration-300 ${
+      className={`fixed top-0 z-50 w-full overflow-visible transition-all duration-300 ${
         scrolled
           ? "border-b bg-background/70 shadow-sm backdrop-blur-xl"
           : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-4">
+      <div className="mx-auto flex h-14 max-w-5xl items-center justify-between overflow-visible px-4">
         <a
-          href="#"
+          href="/"
           className="flex items-center gap-2 transition-opacity hover:opacity-80"
         >
-          <Logo className="h-8 w-8" />
-          <span className="text-lg font-semibold tracking-tight">Bites In Byte</span>
+          <Logo className="h-8 w-8" lit={theme !== "dark"} />
+          <span className="text-lg font-semibold tracking-tight">Lamplit Labs</span>
         </a>
 
         <nav className="hidden items-center gap-1 md:flex">
@@ -60,13 +60,13 @@ export function Header({
               </a>
             );
           })}
-          <div className="ml-1">
-            <ThemeSwitch theme={theme} setTheme={setTheme} />
+          <div className="ml-2">
+            <LampToggle theme={theme} setTheme={setTheme} />
           </div>
         </nav>
 
         <div className="flex items-center gap-2 md:hidden">
-          <ThemeSwitch theme={theme} setTheme={setTheme} />
+          <LampToggle theme={theme} setTheme={setTheme} />
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="rounded-md p-2 text-muted-foreground transition-colors hover:text-foreground"

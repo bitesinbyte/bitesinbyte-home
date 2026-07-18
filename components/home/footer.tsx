@@ -24,13 +24,13 @@ export function Footer() {
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <div className="sm:col-span-2 lg:col-span-1">
             <a href="#" className="inline-flex items-center gap-2">
-              <Logo className="h-7 w-7" />
+              <Logo className="h-7 w-7" lit />
               <span className="text-base font-semibold tracking-tight">
-                Bites In Byte
+                Lamplit Labs
               </span>
             </a>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              Small, practical software packed into every byte.
+              Small, practical software that illuminates the path forward.
             </p>
           </div>
 
@@ -97,7 +97,7 @@ export function Footer() {
         </div>
 
         <div className="mt-10 border-t pt-6 text-center text-sm text-muted-foreground">
-          &copy; {new Date().getFullYear()} Bites In Byte. All rights reserved.
+          &copy; {new Date().getFullYear()} Lamplit Labs. All rights reserved.
         </div>
       </div>
     </footer>

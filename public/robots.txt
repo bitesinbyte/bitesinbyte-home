@@ -1,5 +1,5 @@
-# robots.txt for bitesinbyte.com
+# robots.txt for lamplitlabs.com
 User-agent: *
 Allow: /
 
-Sitemap: https://www.bitesinbyte.com/sitemap.xml
+Sitemap: https://www.lamplitlabs.com/sitemap.xml

@@ -2,13 +2,14 @@
 
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
+import { EasterEggs } from "@/components/easter-eggs";
 import { AboutSection } from "@/components/home/about-section";
 import { ContactSection } from "@/components/home/contact-section";
 import { Footer } from "@/components/home/footer";
 import { Header } from "@/components/home/header";
 import { HeroSection } from "@/components/home/hero-section";
 import { ProductsSection } from "@/components/home/products-section";
-import { WhyBitesSection } from "@/components/home/why-bites-section";
+import { WhyLamplitSection } from "@/components/home/why-lamplit-section";
 
 export default function Home() {
   const { theme, setTheme } = useTheme();
@@ -36,7 +37,7 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    const sectionIds = ["products", "about", "contact"];
+    const sectionIds = ["products", "about", "contact", "our-story"];
     const observers: IntersectionObserver[] = [];
 
     for (const id of sectionIds) {
@@ -72,11 +73,12 @@ export default function Home() {
         setTheme={setTheme}
       />
       <HeroSection />
-      <WhyBitesSection />
+      <WhyLamplitSection />
       <ProductsSection />
       <AboutSection />
       <ContactSection />
       <Footer />
+      <EasterEggs />
     </div>
   );
 }

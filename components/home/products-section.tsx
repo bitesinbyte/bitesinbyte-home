@@ -7,7 +7,7 @@ export function ProductsSection() {
     <section id="products" className="border-t">
       <div className="mx-auto max-w-5xl px-4 py-24">
         <RevealSection className="mb-14 text-center">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+          <h2 className="font-display text-3xl font-semibold tracking-tight sm:text-4xl">
             Our Products
           </h2>
           <p className="mt-3 text-muted-foreground">
