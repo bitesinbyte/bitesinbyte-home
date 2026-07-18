@@ -1,3 +1,5 @@
+import { useId } from "react";
+
 export function Logo({
   className,
   lit = true,
@@ -7,54 +9,43 @@ export function Logo({
   lit?: boolean;
   onClick?: () => void;
 }) {
+  // useId emits colons (":r0:"), which some browsers reject inside url(#...)
+  const gradientId = `logo-glow-${useId().replace(/:/g, "")}`;
+
   return (
     <svg
-      viewBox="0 0 24 24"
+      viewBox="0 0 100 100"
       xmlns="http://www.w3.org/2000/svg"
-      className={`${className ?? ""} transition-all duration-500 ${lit ? "lamp-glow" : ""} ${onClick ? "cursor-pointer" : ""}`}
+      className={`${className ?? ""} transition-all duration-500 ${lit ? "lamp-glow-static" : ""} ${onClick ? "cursor-pointer" : ""}`}
       fill="none"
       onClick={onClick}
       role={onClick ? "button" : undefined}
-      aria-label={onClick ? (lit ? "Turn off the light" : "Turn on the light") : undefined}
     >
-      {/* Bulb body */}
-      <path
-        d="M12 2C8.13 2 5 5.13 5 9c0 2.61 1.43 4.88 3.5 6.13V17.5c0 .28.22.5.5.5h6c.28 0 .5-.22.5-.5v-2.37C17.57 13.88 19 11.61 19 9c0-3.87-3.13-7-7-7Z"
-        fill={lit ? "hsl(38, 85%, 55%)" : "currentColor"}
-        opacity={lit ? 0.2 : 0.05}
-        stroke="currentColor"
-        strokeWidth="2"
-        className="transition-all duration-500"
-      />
+      <defs>
+        <radialGradient id={gradientId} cx="42%" cy="38%" r="70%">
+          <stop offset="0%" stopColor="hsl(44, 95%, 64%)" />
+          <stop offset="55%" stopColor="hsl(38, 90%, 56%)" />
+          <stop offset="100%" stopColor="hsl(31, 92%, 47%)" />
+        </radialGradient>
+      </defs>
 
-      {/* Base lines */}
-      <line x1="9" y1="20" x2="15" y2="20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-      <line x1="10" y1="23" x2="14" y2="23" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <rect width="100" height="100" rx="22" fill="#0a0a0f" />
 
-      {/* Inner glow - only visible when lit */}
+      {/* Glowing disc */}
       <circle
-        cx="12"
-        cy="9"
-        r={lit ? 2.5 : 0}
-        fill="hsl(38, 85%, 55%)"
-        opacity={lit ? 0.8 : 0}
-        className="transition-all duration-500"
+        cx="50"
+        cy="50"
+        r="33"
+        fill={`url(#${gradientId})`}
+        opacity={lit ? 1 : 0.55}
+        className="transition-opacity duration-500"
       />
 
-      {/* Rays - only when lit */}
-      <g
-        stroke="hsl(38, 85%, 55%)"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        opacity={lit ? 0.5 : 0}
-        className="transition-all duration-500"
-      >
-        <line x1="12" y1="0" x2="12" y2="-2" />
-        <line x1="5" y1="4" x2="3.5" y2="2.5" />
-        <line x1="19" y1="4" x2="20.5" y2="2.5" />
-        <line x1="2" y1="9" x2="0" y2="9" />
-        <line x1="22" y1="9" x2="24" y2="9" />
-      </g>
+      {/* Negative-space L */}
+      <path
+        d="M42 31 h10 a2 2 0 0 1 2 2 v24 h13 a2 2 0 0 1 2 2 v8 a2 2 0 0 1 -2 2 h-25 a2 2 0 0 1 -2 -2 v-34 a2 2 0 0 1 2 -2 Z"
+        fill="#0a0a0f"
+      />
     </svg>
   );
 }

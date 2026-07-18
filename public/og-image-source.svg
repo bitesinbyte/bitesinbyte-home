@@ -1,31 +1,28 @@
 <svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="glow" cx="42%" cy="38%" r="70%">
+      <stop offset="0%" stop-color="hsl(44, 95%, 64%)" />
+      <stop offset="55%" stop-color="hsl(38, 90%, 56%)" />
+      <stop offset="100%" stop-color="hsl(31, 92%, 47%)" />
+    </radialGradient>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="hsl(38, 85%, 55%)" stop-opacity="0.22" />
+      <stop offset="100%" stop-color="hsl(38, 85%, 55%)" stop-opacity="0" />
+    </radialGradient>
+  </defs>
   <rect x="0" y="0" width="1200" height="630" fill="#0a0a0f" />
 
-  <g transform="translate(600, 100) scale(6.2) translate(-12, -1)">
-    <!-- Rays -->
-    <g stroke="hsl(38, 85%, 55%)" stroke-width="1.6" stroke-linecap="round" opacity="0.85">
-      <line x1="12" y1="0.4" x2="12" y2="-1.6" />
-      <line x1="5" y1="4" x2="3.5" y2="2.5" />
-      <line x1="19" y1="4" x2="20.5" y2="2.5" />
-      <line x1="2.2" y1="9" x2="0.2" y2="9" />
-      <line x1="21.8" y1="9" x2="23.8" y2="9" />
-    </g>
+  <!-- ambient halo behind the mark -->
+  <circle cx="600" cy="185" r="200" fill="url(#halo)" />
 
-    <!-- Bulb body -->
-    <path
-      d="M12 2C8.13 2 5 5.13 5 9c0 2.61 1.43 4.88 3.5 6.13V17.5c0 .28.22.5.5.5h6c.28 0 .5-.22.5-.5v-2.37C17.57 13.88 19 11.61 19 9c0-3.87-3.13-7-7-7Z"
-      fill="#fafafa"
-    />
-
-    <!-- Base lines -->
-    <line x1="9" y1="20" x2="15" y2="20" stroke="#fafafa" stroke-width="2.1" stroke-linecap="round" />
-    <line x1="10" y1="23" x2="14" y2="23" stroke="#fafafa" stroke-width="2.1" stroke-linecap="round" />
-
-    <!-- Inner glow -->
-    <circle cx="12" cy="9" r="2.9" fill="hsl(38, 85%, 55%)" />
+  <!-- glowing disc with negative-space L -->
+  <g transform="translate(600, 185) scale(3.4) translate(-50, -50)">
+    <circle cx="50" cy="50" r="33" fill="url(#glow)" />
+    <path d="M42 31 h10 a2 2 0 0 1 2 2 v24 h13 a2 2 0 0 1 2 2 v8 a2 2 0 0 1 -2 2 h-25 a2 2 0 0 1 -2 -2 v-34 a2 2 0 0 1 2 -2 Z"
+          fill="#0a0a0f" />
   </g>
 
-  <text x="600" y="400" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="64" font-weight="700" fill="#fafafa">Lamplit Labs</text>
-  <text x="600" y="450" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="26" fill="#a1a1aa">Illuminating ideas into software</text>
-  <text x="600" y="565" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#71717a">lamplitlabs.com</text>
+  <text x="600" y="425" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="64" font-weight="700" fill="#fafafa">Lamplit Labs</text>
+  <text x="600" y="475" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="26" fill="#a1a1aa">Illuminating ideas into software</text>
+  <text x="600" y="575" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#71717a">lamplitlabs.com</text>
 </svg>
