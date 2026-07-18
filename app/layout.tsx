@@ -114,7 +114,7 @@ const organizationJsonLd = {
   description:
     "A technology organization building practical tools that solve real problems - from medical exam prep to developer utilities.",
   foundingDate: "2020",
-  sameAs: [socialLinks.x],
+  sameAs: Object.values(socialLinks),
   contactPoint: {
     "@type": "ContactPoint",
     email: "hello@lamplitlabs.com",

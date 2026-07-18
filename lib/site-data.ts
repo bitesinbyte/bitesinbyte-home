@@ -24,11 +24,19 @@ export interface NavLink {
 }
 
 export interface SocialLinks {
+  facebook: string;
+  instagram: string;
+  blog: string;
   x: string;
+  linkedin: string;
 }
 
 export const socialLinks: SocialLinks = {
+  facebook: "https://www.facebook.com/lamplitlabs",
+  instagram: "https://www.instagram.com/lamplitlabs",
+  blog: "https://blogs.lamplitlabs.com",
   x: "https://x.com/lamplitlabs",
+  linkedin: "https://www.linkedin.com/company/lamplitlabs",
 };
 
 export const products: Product[] = [
@@ -204,7 +212,7 @@ export const products: Product[] = [
 export const navLinks: NavLink[] = [
   { label: "Products", href: "#products" },
   { label: "About", href: "#about" },
-  { label: "Blog", href: "https://blogs.lamplitlabs.com", external: true },
+  { label: "Blog", href: socialLinks.blog, external: true },
   { label: "Contact", href: "#contact" },
 ];
 

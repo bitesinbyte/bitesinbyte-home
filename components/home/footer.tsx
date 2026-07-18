@@ -1,16 +1,7 @@
-import type { ComponentType } from "react";
-import { XIcon } from "@/components/icons";
 import { OutboundLink } from "@/components/outbound-link";
+import { socialPlatforms } from "@/components/social-platforms";
 import { navLinks, products, socialLinks } from "@/lib/site-data";
 import { Logo } from "@/components/logo";
-
-const footerSocialLinks: {
-  href: string;
-  icon: ComponentType<{ className?: string }>;
-  label: string;
-}[] = [
-  { href: socialLinks.x, icon: XIcon, label: "X" },
-];
 
 export function Footer() {
   return (
@@ -72,19 +63,19 @@ export function Footer() {
           <div>
             <h4 className="mb-3 text-sm font-semibold">Connect</h4>
             <div className="flex flex-wrap gap-2">
-              {footerSocialLinks.map((item) => (
+              {socialPlatforms.map(({ key, label, icon: Icon }) => (
                 <OutboundLink
-                  key={item.label}
-                  href={item.href}
+                  key={key}
+                  href={socialLinks[key]}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={item.label}
+                  aria-label={label}
                   className="rounded-lg border p-2 text-muted-foreground transition-colors hover:border-foreground/20 hover:text-foreground"
-                  trackingTarget={item.label.toLowerCase()}
+                  trackingTarget={key}
                   trackingContext="footer_social"
-                  trackingUrl={item.href}
+                  trackingUrl={socialLinks[key]}
                 >
-                  <item.icon className="h-4 w-4" />
+                  <Icon className="h-4 w-4" />
                 </OutboundLink>
               ))}
             </div>
