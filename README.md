@@ -69,8 +69,11 @@ The canonical production endpoints are [lamplitlabs.com](https://lamplitlabs.com
 ## Connect
 
 - [GitHub](https://github.com/lamplitlabs)
-- [X](https://x.com/lamplitlabs)
+- [Facebook](https://www.facebook.com/lamplitlabs)
+- [Instagram](https://www.instagram.com/lamplitlabs)
 - [Blog](https://blogs.lamplitlabs.com)
+- [X](https://x.com/lamplitlabs)
+- [LinkedIn](https://www.linkedin.com/company/lamplitlabs)
 
 ## License
 

@@ -1,6 +1,6 @@
-import { BookOpen, Github, Mail } from "lucide-react";
-import { XIcon } from "@/components/icons";
+import { Github, Mail } from "lucide-react";
 import { OutboundLink } from "@/components/outbound-link";
+import { socialPlatforms } from "@/components/social-platforms";
 import { Button } from "@/components/ui/button";
 import { RevealSection } from "@/components/home/reveal-section";
 import { socialLinks } from "@/lib/site-data";
@@ -42,30 +42,22 @@ export function ContactSection() {
               <Github className="h-4 w-4" />
               GitHub
             </OutboundLink>
-            <OutboundLink
-              href={socialLinks.x}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-lg border px-4 py-2 text-sm text-muted-foreground transition-colors hover:border-foreground/20 hover:text-foreground"
-              trackingTarget="x"
-              trackingContext="contact_link"
-              trackingUrl={socialLinks.x}
-            >
-              <XIcon className="h-4 w-4" />
-              X
-            </OutboundLink>
-            <OutboundLink
-              href="https://blogs.lamplitlabs.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-lg border px-4 py-2 text-sm text-muted-foreground transition-colors hover:border-foreground/20 hover:text-foreground"
-              trackingTarget="blog"
-              trackingContext="contact_link"
-              trackingUrl="https://blogs.lamplitlabs.com"
-            >
-              <BookOpen className="h-4 w-4" />
-              Blog
-            </OutboundLink>
+            {socialPlatforms.map(({ key, label, icon: Icon }) => (
+              <OutboundLink
+                key={key}
+                href={socialLinks[key]}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
+                className="inline-flex items-center gap-2 rounded-lg border px-4 py-2 text-sm text-muted-foreground transition-colors hover:border-foreground/20 hover:text-foreground"
+                trackingTarget={key}
+                trackingContext="contact_link"
+                trackingUrl={socialLinks[key]}
+              >
+                <Icon className="h-4 w-4" />
+                {label}
+              </OutboundLink>
+            ))}
           </div>
         </RevealSection>
       </div>
