@@ -15,9 +15,10 @@ export function HeroSection() {
         </h1>
 
         <p className="hero-entrance hero-entrance-3 mx-auto mt-6 max-w-xl text-lg leading-8 text-muted-foreground">
-          From medical exam prep for doctors in Germany to citizenship test tools,
-          career resources, and developer utilities &mdash; we build practical
-          software that makes a real difference.
+          From enterprise agent governance with Amistio to medical exam prep,
+          citizenship tools, career resources, developer utilities, and
+          compliance &mdash; we build practical software that makes a real
+          difference.
         </p>
 
         <div className="hero-entrance hero-entrance-4 mt-10 flex flex-wrap items-center justify-center gap-4">

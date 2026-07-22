@@ -3,6 +3,15 @@ export interface ProductHighlight {
   description: string;
 }
 
+export type ProductStatus = "In development";
+
+export interface ProductSchema {
+  name: string;
+  applicationCategory: "BusinessApplication" | "UtilitiesApplication";
+  creativeWorkStatus: ProductStatus;
+  featureList: string[];
+}
+
 export interface Product {
   slug: string;
   name: string;
@@ -15,6 +24,11 @@ export interface Product {
   highlights: ProductHighlight[];
   featured?: boolean;
   comingSoon?: boolean;
+  status?: ProductStatus;
+  metaTitle?: string;
+  metaDescription?: string;
+  canonicalUrl?: string;
+  schema?: ProductSchema;
 }
 
 export interface NavLink {
@@ -43,21 +57,59 @@ export const products: Product[] = [
   {
     slug: "amistio",
     name: "Amistio",
-    title: "A personal AI teacher for anything you want to learn",
+    title: "AI agents that take real action with provable control.",
     description:
-      "Talk to Ami and a team of AI teaching agents that plan your learning Journey, assign and grade real practice, and adapt to you — for any subject.",
+      "A governance-first enterprise agent platform in development for versioned agents, governed MCP, portable infrastructure, and inspectable evidence.",
     longDescription:
-      "Amistio is a general-purpose learning platform built around a real learning loop: you talk, Ami plans, you practice, your work gets graded, and the next step adapts to how you did. The same loop serves languages, coding, math, music, and exam prep through pluggable subject packs. Start from scratch or bring your own notes, slides, or syllabus and get a structured, graded Journey built around them.",
+      "Amistio is a governance-first enterprise agent platform in development. Mutable AgentDrafts become immutable, content-addressed AgentVersions and are attached to environments through Bindings. Governed MCP, enterprise identity and policy, exact-call approvals, inspectable and exportable evidence, and vendor-neutral ports for models, state, queues, secrets, and observability are designed to keep agent actions controlled and portable.",
     url: "https://www.amistio.com",
     cover: "/covers/amistio.svg",
-    tags: ["AI", "Learning", "Education"],
+    tags: ["Enterprise AI", "Agent Governance", "MCP"],
     highlights: [
-      { title: "Any Subject", description: "One platform for languages, code, math, music, and exam prep. New subjects ship as packs, so the catalog keeps growing." },
-      { title: "Bring Your Own Materials", description: "Import your notes, slides, PDFs, or a syllabus and Ami builds a structured, graded Journey around them." },
-      { title: "Graded Feedback", description: "Assignments are scored against real rubrics with specific, actionable feedback — not a generic 'good job'." },
-      { title: "Adapts to You", description: "Difficulty, pace, and focus follow your stated preferences and your actual results, session after session." },
+      {
+        title: "Versioned Agent Contracts",
+        description:
+          "Typed workflow foundations define the path from a mutable AgentDraft to an immutable, content-addressed AgentVersion and environment Binding.",
+      },
+      {
+        title: "Governed MCP Contracts",
+        description:
+          "Registry and conformance contracts establish how MCP capabilities can be discovered and governed before live provisioning is added.",
+      },
+      {
+        title: "Identity, Policy, and Evidence",
+        description:
+          "Enterprise identity and policy contracts support exact-call approvals and inspectable, exportable evidence for accountable agent actions.",
+      },
+      {
+        title: "Portable Infrastructure",
+        description:
+          "Implemented persistence, queue, and secret-reference adapters sit behind vendor-neutral ports for models, state, queues, secrets, and observability.",
+      },
+      {
+        title: "Control Plane in Development",
+        description:
+          "The enterprise workspace, runtime and gateway, and live MCP provisioning are in active development; customer-managed deployment and visual collaboration are later-stage plans.",
+      },
     ],
     featured: true,
+    status: "In development",
+    metaTitle: "Amistio - Governed Enterprise Agent Builder",
+    metaDescription:
+      "Amistio is building a governance-first enterprise agent platform for versioned agents, governed MCP, enterprise identity and policy, portable infrastructure, and inspectable evidence.",
+    canonicalUrl: "https://www.amistio.com",
+    schema: {
+      name: "Amistio enterprise agent platform",
+      applicationCategory: "BusinessApplication",
+      creativeWorkStatus: "In development",
+      featureList: [
+        "Versioned agent definition and binding contracts",
+        "Governed MCP registry and conformance contracts",
+        "Enterprise identity and policy architecture",
+        "Portable state, queue, and secret-reference infrastructure",
+        "Control-plane, gateway, and runtime surfaces in active development",
+      ],
+    },
   },
   {
     slug: "kenntnistrainer",

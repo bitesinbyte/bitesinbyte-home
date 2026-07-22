@@ -4,12 +4,13 @@ The official website for [Lamplit Labs](https://www.lamplitlabs.com) — a techn
 
 Formerly known as Bites In Byte.
 
-From medical exam prep for doctors in Germany to citizenship test tools, career resources, and developer utilities — small, practical software packed into every byte.
+From enterprise agent governance with Amistio to medical exam prep, citizenship tools, career resources, and developer utilities — small, practical software packed into every byte.
 
 ## Products
 
 | Product | Description | URL |
 |---------|-------------|-----|
+| **Amistio** | Governance-first enterprise agent platform (`BusinessApplication`) — **In development** | [amistio.com](https://www.amistio.com) |
 | **Kenntnistrainer** | KI-gestützte Kenntnisprüfung simulation & training for foreign doctors in Germany | [kenntnistrainer.de](https://www.kenntnistrainer.de) |
 | **Fachsprachprüfung** | KI-gestützte FSP simulation & training for foreign doctors in Germany _(coming soon)_ | — |
 | **Leben in Deutschland** | German citizenship test (Einbürgerungstest) prep with 310 questions | [lebenindeutschland.org](https://www.lebenindeutschland.org) |

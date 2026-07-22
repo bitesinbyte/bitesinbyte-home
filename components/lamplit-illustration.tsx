@@ -61,11 +61,12 @@ export function LamplitIllustration({ className }: { className?: string }) {
 
       {/* Illuminated items in the light cone */}
       {[
-        { label: "education", x: 170, y: 160 },
-        { label: "developer tools", x: 260, y: 170 },
-        { label: "career", x: 190, y: 210 },
-        { label: "medical prep", x: 270, y: 220 },
-        { label: "compliance", x: 210, y: 260 },
+        { label: "agent governance", x: 145, y: 125 },
+        { label: "education", x: 165, y: 165 },
+        { label: "developer tools", x: 270, y: 165 },
+        { label: "career", x: 170, y: 210 },
+        { label: "medical prep", x: 250, y: 210 },
+        { label: "compliance", x: 215, y: 250 },
       ].map((item) => (
         <g key={item.label} transform={`translate(${item.x}, ${item.y})`}>
           <rect

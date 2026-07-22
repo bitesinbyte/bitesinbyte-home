@@ -26,12 +26,15 @@ export function generateMetadata({ params }: ProductPageProps): Metadata {
     };
   }
 
-  const title = `${product.name} - ${product.title}`;
-  const description = product.longDescription;
-  const canonicalUrl = `https://www.lamplitlabs.com/products/${product.slug}`;
+  const defaultTitle = `${product.name} - ${product.title}`;
+  const title = product.metaTitle ?? defaultTitle;
+  const description = product.metaDescription ?? product.longDescription;
+  const canonicalUrl =
+    product.canonicalUrl ??
+    `https://www.lamplitlabs.com/products/${product.slug}`;
 
   return {
-    title,
+    title: product.metaTitle ? { absolute: title } : title,
     description,
     alternates: {
       canonical: canonicalUrl,
@@ -61,10 +64,13 @@ function ProductJsonLd({ slug }: { slug: string }) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    name: product.name,
-    url: product.url,
-    applicationCategory: "UtilitiesApplication",
-    description: product.longDescription,
+    name: product.schema?.name ?? product.name,
+    url: product.canonicalUrl ?? product.url,
+    applicationCategory:
+      product.schema?.applicationCategory ?? "UtilitiesApplication",
+    description: product.metaDescription ?? product.longDescription,
+    creativeWorkStatus: product.schema?.creativeWorkStatus,
+    featureList: product.schema?.featureList,
     operatingSystem: "Web",
     image: `https://www.lamplitlabs.com${product.cover}`,
     creator: {
@@ -88,6 +94,8 @@ export default function ProductPage({ params }: ProductPageProps) {
   if (!product) {
     notFound();
   }
+
+  const isInDevelopment = product.status === "In development";
 
   return (
     <>
@@ -113,7 +121,7 @@ export default function ProductPage({ params }: ProductPageProps) {
             trackingUrl={product.url}
             className="inline-flex items-center gap-1.5 rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
-            Visit {product.name}
+            {isInDevelopment ? "Follow development" : `Visit ${product.name}`}
             <ExternalLink className="h-3.5 w-3.5" />
           </OutboundLink>
         </div>
@@ -131,6 +139,11 @@ export default function ProductPage({ params }: ProductPageProps) {
         <div className="relative mx-auto max-w-5xl px-4 pb-16 pt-20 sm:pb-20 sm:pt-28">
           {/* Tags */}
           <div className="mb-6 flex flex-wrap gap-2">
+            {product.status && (
+              <span className="rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary">
+                Status: {product.status}
+              </span>
+            )}
             {product.tags.map((tag) => (
               <span
                 key={tag}
@@ -141,12 +154,25 @@ export default function ProductPage({ params }: ProductPageProps) {
             ))}
           </div>
 
-          <h1 className="font-display text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
-            {product.name}
-          </h1>
-          <p className="mt-4 max-w-2xl text-xl text-muted-foreground sm:text-2xl">
-            {product.title}
-          </p>
+          {isInDevelopment ? (
+            <>
+              <p className="font-display text-xl font-semibold tracking-tight text-muted-foreground">
+                {product.name}
+              </p>
+              <h1 className="mt-4 max-w-3xl font-display text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
+                {product.title}
+              </h1>
+            </>
+          ) : (
+            <>
+              <h1 className="font-display text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
+                {product.name}
+              </h1>
+              <p className="mt-4 max-w-2xl text-xl text-muted-foreground sm:text-2xl">
+                {product.title}
+              </p>
+            </>
+          )}
 
           <div className="mt-10 flex flex-wrap gap-4">
             <Button size="lg" asChild>
@@ -158,7 +184,9 @@ export default function ProductPage({ params }: ProductPageProps) {
                 trackingContext="product_page_hero_cta"
                 trackingUrl={product.url}
               >
-                Get started
+                {isInDevelopment
+                  ? `Explore ${product.name}`
+                  : "Get started"}
                 <ArrowUpRight className="ml-2 h-4 w-4" />
               </OutboundLink>
             </Button>
@@ -229,7 +257,9 @@ export default function ProductPage({ params }: ProductPageProps) {
         <div className="mx-auto max-w-5xl px-4 py-16 sm:py-24">
           <div className="rounded-2xl border bg-card p-8 text-center sm:p-12">
             <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
-              Ready to try {product.name}?
+              {isInDevelopment
+                ? `Follow ${product.name}'s development`
+                : `Ready to try ${product.name}?`}
             </h2>
             <p className="mx-auto mt-4 max-w-lg text-muted-foreground">
               {product.description}
@@ -244,7 +274,9 @@ export default function ProductPage({ params }: ProductPageProps) {
                   trackingContext="product_page_bottom_cta"
                   trackingUrl={product.url}
                 >
-                  Visit {product.name}
+                  {isInDevelopment
+                    ? "Follow development"
+                    : `Visit ${product.name}`}
                   <ArrowUpRight className="ml-2 h-4 w-4" />
                 </OutboundLink>
               </Button>

@@ -1,7 +1,7 @@
 {
   "name": "Lamplit Labs",
   "short_name": "LamplitLabs",
-  "description": "Tools that solve real problems — Kenntnistrainer, Leben in Deutschland, Resume Builder, EDMX Tools, and more.",
+  "description": "Lamplit Labs builds Amistio for enterprise agent governance alongside practical education, career, developer, and compliance tools.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
