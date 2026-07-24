@@ -13,6 +13,7 @@ function ProductCard({
 }) {
   const isFeatured = product.featured;
   const isComingSoon = product.comingSoon;
+  const isInDevelopment = product.status === "In development";
 
   const inner = (
     <div
@@ -30,10 +31,10 @@ function ProductCard({
         }`}
       />
 
-      {/* Coming Soon badge */}
-      {isComingSoon && (
+      {/* Product status badge */}
+      {(product.status || isComingSoon) && (
         <div className="absolute right-4 top-4 z-10 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white/90 backdrop-blur-md">
-          Coming Soon
+          {product.status ?? "Coming Soon"}
         </div>
       )}
 
@@ -121,13 +122,13 @@ function ProductCard({
           trackingContext="product_grid_visit"
           trackingUrl={product.url}
         >
-          Visit site &rarr;
+          {isInDevelopment ? "Follow development" : "Visit site"} &rarr;
         </OutboundLink>
         <a
           href={`/products/${product.slug}`}
           className="text-xs font-medium text-muted-foreground transition-colors hover:text-foreground"
         >
-          Learn more &rarr;
+          {isInDevelopment ? "Explore product" : "Learn more"} &rarr;
         </a>
       </div>
     </div>

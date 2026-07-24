@@ -3,6 +3,16 @@ export interface ProductHighlight {
   description: string;
 }
 
+export type ProductStatus = "Live" | "In development";
+export type ProductCreativeWorkStatus = "Published" | "In development";
+
+export interface ProductSchema {
+  name: string;
+  applicationCategory: "BusinessApplication" | "UtilitiesApplication";
+  creativeWorkStatus: ProductCreativeWorkStatus;
+  featureList: string[];
+}
+
 export interface Product {
   slug: string;
   name: string;
@@ -15,6 +25,11 @@ export interface Product {
   highlights: ProductHighlight[];
   featured?: boolean;
   comingSoon?: boolean;
+  status?: ProductStatus;
+  metaTitle?: string;
+  metaDescription?: string;
+  canonicalUrl?: string;
+  schema?: ProductSchema;
 }
 
 export interface NavLink {
@@ -43,21 +58,61 @@ export const products: Product[] = [
   {
     slug: "amistio",
     name: "Amistio",
-    title: "A personal AI teacher for anything you want to learn",
+    title: "Build agents that do the work. Stay in control.",
     description:
-      "Talk to Ami and a team of AI teaching agents that plan your learning Journey, assign and grade real practice, and adapt to you — for any subject.",
+      "A visual AI agent builder for turning goals into versioned automations with real app actions, approval gates, shareable run pages, and inspectable runs.",
     longDescription:
-      "Amistio is a general-purpose learning platform built around a real learning loop: you talk, Ami plans, you practice, your work gets graded, and the next step adapts to how you did. The same loop serves languages, coding, math, music, and exam prep through pluggable subject packs. Start from scratch or bring your own notes, slides, or syllabus and get a structured, graded Journey built around them.",
+      "Amistio helps individuals, small businesses, and teams build agents that do more than chat. Start from a template, describe a goal, or assemble a flow on the visual canvas; connect AI and app actions; test the editable draft; then freeze, publish, and activate an exact version. Agents can run manually, on schedules, from webhooks, or through shareable forms, with encrypted connections, human approvals, agent-owned data, and a clear run history. Remote MCP servers can be connected, while MCP tool execution, organization-owned agents, and supported customer-managed deployment remain planned.",
     url: "https://www.amistio.com",
     cover: "/covers/amistio.svg",
-    tags: ["AI", "Learning", "Education"],
+    tags: ["AI Agents", "Visual Automation", "App Connectors"],
     highlights: [
-      { title: "Any Subject", description: "One platform for languages, code, math, music, and exam prep. New subjects ship as packs, so the catalog keeps growing." },
-      { title: "Bring Your Own Materials", description: "Import your notes, slides, PDFs, or a syllabus and Ami builds a structured, graded Journey around them." },
-      { title: "Graded Feedback", description: "Assignments are scored against real rubrics with specific, actionable feedback — not a generic 'good job'." },
-      { title: "Adapts to You", description: "Difficulty, pace, and focus follow your stated preferences and your actual results, session after session." },
+      {
+        title: "Visual Agent Builder",
+        description:
+          "Start from a working template, describe an outcome in plain language, or drag and connect plain-language blocks on the canvas.",
+      },
+      {
+        title: "Real App Actions",
+        description:
+          "Use typed actions for Slack, GitHub, Notion, Airtable, Discord, Google Sheets, HTTP, time, random IDs, and each agent's own data store.",
+      },
+      {
+        title: "Versioned Releases",
+        description:
+          "Test an editable draft, freeze an immutable signed version, publish it, and activate the exact graph that should run.",
+      },
+      {
+        title: "Flexible Runs",
+        description:
+          "Run manually, from a webhook, on a schedule, or through a shareable page with a designed form and optional voice conversation.",
+      },
+      {
+        title: "Controls Built In",
+        description:
+          "Keep credentials encrypted, pause sensitive steps for human approval, share versions without credentials, and inspect every run's steps and outcome.",
+      },
     ],
     featured: true,
+    status: "Live",
+    metaTitle: "Amistio - Visual AI Agent Builder",
+    metaDescription:
+      "Build visual AI agents with app connectors, immutable versions, approval gates, shareable run pages, and inspectable execution history.",
+    canonicalUrl: "https://www.amistio.com",
+    schema: {
+      name: "Amistio visual AI agent builder",
+      applicationCategory: "BusinessApplication",
+      creativeWorkStatus: "Published",
+      featureList: [
+        "Visual drag-and-drop agent flow builder",
+        "Starter templates and goal-to-draft generation",
+        "Built-in tools and provider app connectors",
+        "Encrypted per-user connection credentials",
+        "Immutable agent versions and activation",
+        "Manual, webhook, scheduled, share-link, and voice runs",
+        "Human approval gates and inspectable run history",
+      ],
+    },
   },
   {
     slug: "kenntnistrainer",
