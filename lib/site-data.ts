@@ -3,12 +3,13 @@ export interface ProductHighlight {
   description: string;
 }
 
-export type ProductStatus = "In development";
+export type ProductStatus = "Live" | "In development";
+export type ProductCreativeWorkStatus = "Published" | "In development";
 
 export interface ProductSchema {
   name: string;
   applicationCategory: "BusinessApplication" | "UtilitiesApplication";
-  creativeWorkStatus: ProductStatus;
+  creativeWorkStatus: ProductCreativeWorkStatus;
   featureList: string[];
 }
 
@@ -57,57 +58,59 @@ export const products: Product[] = [
   {
     slug: "amistio",
     name: "Amistio",
-    title: "AI agents that take real action with provable control.",
+    title: "Build agents that do the work. Stay in control.",
     description:
-      "A governance-first enterprise agent platform in development for versioned agents, governed MCP, portable infrastructure, and inspectable evidence.",
+      "A visual AI agent builder for turning goals into versioned automations with real app actions, approval gates, shareable run pages, and inspectable runs.",
     longDescription:
-      "Amistio is a governance-first enterprise agent platform in development. Mutable AgentDrafts become immutable, content-addressed AgentVersions and are attached to environments through Bindings. Governed MCP, enterprise identity and policy, exact-call approvals, inspectable and exportable evidence, and vendor-neutral ports for models, state, queues, secrets, and observability are designed to keep agent actions controlled and portable.",
+      "Amistio helps individuals, small businesses, and teams build agents that do more than chat. Start from a template, describe a goal, or assemble a flow on the visual canvas; connect AI and app actions; test the editable draft; then freeze, publish, and activate an exact version. Agents can run manually, on schedules, from webhooks, or through shareable forms, with encrypted connections, human approvals, agent-owned data, and a clear run history. Remote MCP servers can be connected, while MCP tool execution, organization-owned agents, and supported customer-managed deployment remain planned.",
     url: "https://www.amistio.com",
     cover: "/covers/amistio.svg",
-    tags: ["Enterprise AI", "Agent Governance", "MCP"],
+    tags: ["AI Agents", "Visual Automation", "App Connectors"],
     highlights: [
       {
-        title: "Versioned Agent Contracts",
+        title: "Visual Agent Builder",
         description:
-          "Typed workflow foundations define the path from a mutable AgentDraft to an immutable, content-addressed AgentVersion and environment Binding.",
+          "Start from a working template, describe an outcome in plain language, or drag and connect plain-language blocks on the canvas.",
       },
       {
-        title: "Governed MCP Contracts",
+        title: "Real App Actions",
         description:
-          "Registry and conformance contracts establish how MCP capabilities can be discovered and governed before live provisioning is added.",
+          "Use typed actions for Slack, GitHub, Notion, Airtable, Discord, Google Sheets, HTTP, time, random IDs, and each agent's own data store.",
       },
       {
-        title: "Identity, Policy, and Evidence",
+        title: "Versioned Releases",
         description:
-          "Enterprise identity and policy contracts support exact-call approvals and inspectable, exportable evidence for accountable agent actions.",
+          "Test an editable draft, freeze an immutable signed version, publish it, and activate the exact graph that should run.",
       },
       {
-        title: "Portable Infrastructure",
+        title: "Flexible Runs",
         description:
-          "Implemented persistence, queue, and secret-reference adapters sit behind vendor-neutral ports for models, state, queues, secrets, and observability.",
+          "Run manually, from a webhook, on a schedule, or through a shareable page with a designed form and optional voice conversation.",
       },
       {
-        title: "Control Plane in Development",
+        title: "Controls Built In",
         description:
-          "The enterprise workspace, runtime and gateway, and live MCP provisioning are in active development; customer-managed deployment and visual collaboration are later-stage plans.",
+          "Keep credentials encrypted, pause sensitive steps for human approval, share versions without credentials, and inspect every run's steps and outcome.",
       },
     ],
     featured: true,
-    status: "In development",
-    metaTitle: "Amistio - Governed Enterprise Agent Builder",
+    status: "Live",
+    metaTitle: "Amistio - Visual AI Agent Builder",
     metaDescription:
-      "Amistio is building a governance-first enterprise agent platform for versioned agents, governed MCP, enterprise identity and policy, portable infrastructure, and inspectable evidence.",
+      "Build visual AI agents with app connectors, immutable versions, approval gates, shareable run pages, and inspectable execution history.",
     canonicalUrl: "https://www.amistio.com",
     schema: {
-      name: "Amistio enterprise agent platform",
+      name: "Amistio visual AI agent builder",
       applicationCategory: "BusinessApplication",
-      creativeWorkStatus: "In development",
+      creativeWorkStatus: "Published",
       featureList: [
-        "Versioned agent definition and binding contracts",
-        "Governed MCP registry and conformance contracts",
-        "Enterprise identity and policy architecture",
-        "Portable state, queue, and secret-reference infrastructure",
-        "Control-plane, gateway, and runtime surfaces in active development",
+        "Visual drag-and-drop agent flow builder",
+        "Starter templates and goal-to-draft generation",
+        "Built-in tools and provider app connectors",
+        "Encrypted per-user connection credentials",
+        "Immutable agent versions and activation",
+        "Manual, webhook, scheduled, share-link, and voice runs",
+        "Human approval gates and inspectable run history",
       ],
     },
   },
